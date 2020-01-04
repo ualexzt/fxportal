@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="" />
+    <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fxportal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fxportal/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fxportal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fxportal/urls.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,15 +18,34 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1VvTNqkpbP9vEUp48tdm2X1ImgD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunManager">
@@ -28,6 +55,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Fxportal.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -68,7 +96,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578132531371</updated>
-      <workItem from="1578132563187" duration="259000" />
+      <workItem from="1578132563187" duration="1600000" />
+      <workItem from="1578142801446" duration="3185000" />
     </task>
     <servers />
   </component>
@@ -76,6 +105,58 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="283" y="49" key="#Inspections" timestamp="1578145785496">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="283" y="49" key="#Inspections/0.0.1366.768@0.0.1366.768" timestamp="1578145785496" />
+    <state x="283" y="49" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578142828723">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="283" y="49" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1578142828723" />
+    <state x="294" y="0" key="CommitChangelistDialog2" timestamp="1578135101799">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="294" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1578135101799" />
+    <state x="484" y="262" width="475" height="199" key="Github.ShareDialog" timestamp="1578133046855">
+      <screen x="0" y="23" width="1366" height="675" />
+    </state>
+    <state x="484" y="262" width="475" height="199" key="Github.ShareDialog/0.23.1366.675@0.23.1366.675" timestamp="1578133046855" />
+    <state x="436" y="69" key="Github.UntrackedFilesDialog" timestamp="1578133079013">
+      <screen x="0" y="23" width="1366" height="675" />
+    </state>
+    <state x="436" y="69" key="Github.UntrackedFilesDialog/0.23.1366.675@0.23.1366.675" timestamp="1578133079013" />
+    <state width="1324" height="250" key="GridCell.Tab.0.bottom" timestamp="1578135139630">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="250" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1578135139630" />
+    <state width="1324" height="250" key="GridCell.Tab.0.center" timestamp="1578135139628">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="250" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1578135139628" />
+    <state width="1324" height="250" key="GridCell.Tab.0.left" timestamp="1578135139628">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="250" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1578135139628" />
+    <state width="1324" height="250" key="GridCell.Tab.0.right" timestamp="1578135139629">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="250" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1578135139629" />
+    <state width="1324" height="250" key="GridCell.Tab.1.bottom" timestamp="1578135139633">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="250" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1578135139633" />
+    <state width="1324" height="250" key="GridCell.Tab.1.center" timestamp="1578135139632">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="250" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1578135139632" />
+    <state width="1324" height="250" key="GridCell.Tab.1.left" timestamp="1578135139631">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="250" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1578135139631" />
+    <state width="1324" height="250" key="GridCell.Tab.1.right" timestamp="1578135139632">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1324" height="250" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1578135139632" />
     <state x="192" y="23" key="SettingsEditor" timestamp="1578132822236">
       <screen x="0" y="23" width="1366" height="675" />
     </state>
