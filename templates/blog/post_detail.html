@@ -1,243 +1,116 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load crispy_forms_tags %}
 {% block title %} {{ object.title }} - {{ block.super }} {% endblock %}
 
 {% block content %}
-    <div class="breadcumb-area bg-img" style="background-image: url({% static 'img/bg-img/breadcumb.jpg' %});">
-        <div class="bradcumbContent">
-            <h2>{{ object.category }}</h2>
+    <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>{{ post.category.name }}</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- Blog section -->
-    <section>
-        <div class="container-fluid">
-            <hr class="my-5">
-            <div class="container">
-                <!-- Cover photo -->
-                <div class="row mb-2 mt-1">
-                    <div class="col-md-12">
-                        <!-- Image -->
-                        <div class="view">
-                            <img src="{{ object.image_post.url }}"
-                                 class="img-fluid z-depth-1 wow fadeIn"
-                                 data-wow-delay="0.2s">
+    <!--/ bradcam_area  -->
+
+    <!--================Blog Area =================-->
+    <section class="blog_area single-post-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 posts-list">
+                    <div class="single-post">
+                        <div class="feature-img">
+                            <img class="img-fluid" src="{{ post.image_post.url }}" alt="">
+                        </div>
+                        <div class="blog_details">
+                            <h2>{{ post.title }}  </h2>
+                            <ul class="blog-info-link mt-3 mb-4">
+                                <li><a href="{{ post.category.get_absolute_url }}"><i
+                                        class="fa fa-user"></i> {{ post.category.name }}</a></li>
+                                <li><a href="#"><i class="fa fa-comments"></i> {{comments.count}} Comments</a></li>
+                            </ul>
+                            <p class="excert">
+                                {{ post.content }}
+                            </p>
                         </div>
                     </div>
-                </div>
-                <!--  Cover photo -->
-                <!-- Blog -->
-                <div class="row mt-4 pt-3">
-                    <!-- Main listing -->
-                    <div class="col-lg-9 col-12 mt-1">
-                        <!-- Section: Blog v.3 -->
-                        <section class="extra-margins pb-5 text-lg-left">
-                            <!-- Grid row -->
-                            <div class="row mb-4">
-                                <!-- Grid column -->
-                                <div class="col-md-12">
-                                    <!-- Title -->
-                                    <h4 class="font-weight-bold wow fadeIn" data-wow-delay="0.2s">
-                                        <strong>{{ object.title }}</strong>
-                                    </h4>
-                                    <hr>
-                                    <!-- Text -->
-                                    <p class="dark-grey-text mb-3 mt-4 mx-4 wow fadeIn"
-                                       data-wow-delay="0.2s">{{ object.content }}</p>
-                                    <hr>
-                                    <!-- Comments -->
-                                    <section>
-                                        <!-- Main wrapper -->
-                                        <div class="comments-list text-center text-md-left">
-                                            <div class="text-center my-5">
-                                                <h3 class="font-weight-bold">Comments
-                                                    <span class="badge indigo">3</span>
-                                                </h3>
-                                            </div>
-                                            <!-- First row -->
-                                            <div class="row mb-5">
-                                                <!-- Image column -->
-                                                <div class="col-sm-2 col-12 mb-3">
-                                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img (8).jpg"
-                                                         class="avatar rounded-circle z-depth-1-half"
-                                                         alt="sample image">
-                                                </div>
-                                                <!-- Image column -->
-
-                                                <!-- Content column -->
-                                                <div class="col-sm-10 col-12">
-                                                    <a>
-                                                        <h5 class="user-name font-weight-bold">Jhon Smith</h5>
-                                                    </a>
-                                                    <div class="card-data">
-                                                        <ul class="list-unstyled">
-                                                            <li class="comment-date font-small">
-                                                                <i class="far fa-clock-o"></i> 05/10/2015
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <p class="dark-grey-text article">Ut enim ad minim veniam, quis
-                                                        nostrud exercitation ullamco
-                                                        laboris nisi ut aliquip ex
-                                                        ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                                        voluptate velit esse
-                                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                                        cupidatat non proident.
-                                                    </p>
-                                                </div>
-                                                <!-- Content column -->
-                                            </div>
-                                            <!-- First row -->
+                    <div class="navigation-top">
+                        <div class="d-sm-flex justify-content-between text-center">
+                            <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and
+                                4
+                                people like this</p>
+                            <div class="col-sm-4 text-center my-2 my-sm-0">
+                                <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
+                            </div>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="comments-area">
+                        <h4>{{ comments.count }} Comments</h4>
+                        <div class="comment-list">
+                            {% for comment in comments %}
+                                <hr>
+                                <div class="single-comment justify-content-between d-flex">
+                                    <div class="user justify-content-between d-flex">
+                                        <div class="thumb">
+                                            <img src="img/comment/comment_1.png" alt="">
                                         </div>
-                                        <!-- Main wrapper -->
-                                    </section>
-                                    <!-- Comments -->
-                                    <hr>
-                                    <!-- Section: Leave a reply (Not Logged In User) -->
-                                    <section class="mb-4 wow fadeIn" data-wow-delay="0.2s">
-                                        <h3 class="font-weight-bold text-center my-5">Добавить комментарий</h3>
-
-                                        <!-- Grid row -->
-                                        <div class="row">
-
-                                            <!-- Grid column -->
-                                            <div class="col-lg-4 col-md-12 mb-4">
-
-                                                <div class="input-group md-form form-sm form-3 pl-0">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text white black-text"
-                                                              id="basic-addon8">1</span>
-                                                    </div>
-                                                    <input type="text"
-                                                           class="form-control mt-0 black-border rgba-white-strong"
-                                                           placeholder="Name" aria-describedby="basic-addon9">
+                                        <div class="desc">
+                                            <p class="comment">
+                                                {{ comment.comment }}
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex align-items-center text-right">
+                                                    <h5>
+                                                        <a href="#">{{ comment.author }}</a>
+                                                    </h5>
+                                                    <p class="date">{{ comment.com_date|date:'M-d-Y' }} </p>
                                                 </div>
-
                                             </div>
-                                            <!-- Grid column -->
-
-                                            <!-- Grid column -->
-                                            <div class="col-lg-4 col-md-6 mb-4">
-
-                                                <div class="input-group md-form form-sm form-3 pl-0">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text white black-text"
-                                                              id="basic-addon9">2</span>
-                                                    </div>
-                                                    <input type="text"
-                                                           class="form-control mt-0 black-border rgba-white-strong"
-                                                           placeholder="Email" aria-describedby="basic-addon9">
-                                                </div>
-
-                                            </div>
-                                            <!-- Grid column -->
-
-                                            <!-- Grid column -->
-                                            <div class="col-lg-4 col-md-6 mb-4">
-
-                                                <div class="input-group md-form form-sm form-3 pl-0">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text white black-text"
-                                                              id="basic-addon10">3</span>
-                                                    </div>
-                                                    <input type="text"
-                                                           class="form-control mt-0 black-border rgba-white-strong"
-                                                           placeholder="Website" aria-describedby="basic-addon9">
-                                                </div>
-
-                                            </div>
-                                            <!-- Grid column -->
-
                                         </div>
-                                        <!-- Grid row -->
-
-                                        <!-- Grid row -->
-                                        <div class="row">
-
-                                            <div class="col-12 mt-1">
-                                                <div class="form-group basic-textarea rounded-corners">
-
-                            <textarea class="form-control" id="exampleFormControlTextarea6" rows="5"
-                                      placeholder="Write something here..."></textarea>
-                                                </div>
-
-                                                <div class="text-right">
-                                                    <button class="btn btn-grey btn-sm">Submit</button>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                        <!-- Grid row -->
-
-                                    </section>
-                                    <!-- Section: Leave a reply (Not Logged In User) -->
+                                    </div>
                                 </div>
-                                <!-- Grid column -->
-                            </div>
-                            <!-- Grid row -->
-                        </section>
-                        <!-- Section: Blog v.3 -->
-                    </div>
-                    <!-- Main listing -->
-                    <!-- Sidebar -->
-                    <div class="col-lg-3 col-12 mt-1 wow fadeIn" data-wow-delay="0.2s">
-
-                        <!-- Card -->
-                        <div class="card">
-
-                            <!-- Card image -->
-                            <div class="view overlay">
-                                <img src="{{ object.author.profile.image.url }}" class="card-img-top"
-                                     alt="">
-                                <a>
-                                    <div class="mask  rgba-white-slight"></div>
-                                </a>
-                            </div>
-                            <!-- Card image -->
-
-                            <!-- Card content -->
-                            <div class="card-body">
-                                <!-- Title -->
-                                <h5 class="card-title dark-grey-text text-center grey lighten-4 py-2">
-                                    <strong>{{ object.author.get_full_name }}</strong>
-                                </h5>
-
-                                <!-- Description -->
-                                <p class="mt-3 dark-grey-text font-small text-center">
-                                    <em>{{ object.author.profile.description }}
-                                    </em>
-                                </p>
-
-                                <ul class="list-unstyled list-inline-item circle-icons list-unstyled flex-center">
-                                    <!-- Facebook -->
-                                    <li>
-                                        <a class="fb-ic">
-                                            <i class="fab fa-facebook-f"> </i>
-                                        </a>
-                                    </li>
-                                    <!-- Twitter -->
-                                    <li>
-                                        <a class="tw-ic">
-                                            <i class="fab fa-twitter mx-3"> </i>
-                                        </a>
-                                    </li>
-                                    <!-- Google + -->
-                                    <li>
-                                        <a class="gplus-ic">
-                                            <i class="fab fa-google-plus-g"> </i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Card content -->
+                            {% endfor %}
                         </div>
-                        <!-- Card -->
                     </div>
-                    <!-- Sidebar -->
+                    <div class="comment-form">
+                        <h4>Добавить комментарий</h4>
+                        <form method="POST" action="{% url 'comment_add' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="object_id" value="{{ post.id }}">
+                            {{ form|crispy }}
+                            <input type="submit" value="Добавить">
+                        </form>
+                    </div>
                 </div>
-                <!-- Blog -->
+                <div class="col-lg-4">
+                    <div class="blog_right_sidebar">
+                        <aside class="single_sidebar_widget post_category_widget">
+                            <div class="media align-items-center">
+                                <img src="img/blog/author.png" alt="">
+
+                                <div class="media-body text-center">
+                                    <a href="#">
+                                        <h4>{{ post.author.get_full_name }}</h4>
+                                    </a>
+                                    <hr>
+                                    <p> Description author</p>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!-- Blog section -->
+    <!--================ Blog Area end =================-->
 {% endblock %}

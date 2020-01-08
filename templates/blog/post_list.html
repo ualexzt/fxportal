@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% load static %}
 {% block title %} Main blog page {% endblock %}
 
 {% block content %}
@@ -9,7 +8,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text">
-                        <h3>Blog</h3>
+                        <h3>News portal poge</h3>
                     </div>
                 </div>
             </div>
@@ -25,29 +24,30 @@
                 <div class="col-lg-8 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
                         {% for post in posts %}
-                        <article class="blog_item">
-                            <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="{{ post.image_post.url }}" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>{{ post.pub_date|date:'d' }}</h3>
-                                    <p>{{ post.pub_date|date:'b' }}</p>
-                                </a>
-                            </div>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="{{ post.image_post.url }}" alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>{{ post.pub_date|date:'d' }}</h3>
+                                        <p>{{ post.pub_date|date:'b' }}</p>
+                                    </a>
+                                </div>
 
-                            <div class="blog_details">
-                                <a class="d-inline-block" href="{{ post.get_absolute_url }}">
-                                    <h2>{{ post.title }}</h2>
-                                    <hr>
-                                </a>
-                                <p>{{ post.content|truncatewords:100 }}</p>
-                                <ul class="blog-info-link">
-                                    <li><a href="{{ post.category.get_absolute_url }}"><i class="fa fa-user"></i> {{ post.category }}</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
-                                </ul>
-                            </div>
-                        </article>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="{{ post.get_absolute_url }}">
+                                        <h2>{{ post.title }}</h2>
+                                        <hr>
+                                    </a>
+                                    <p>{{ post.content|truncatewords:100 }}</p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="{{ post.category.get_absolute_url }}"><i
+                                                class="fa fa-user"></i> {{ post.category }}</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> {{ post.comment.count }} Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
                         {% endfor %}
-                          <nav class="blog-pagination justify-content-center d-flex">
+                        <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
                                 <li class="page-item">
                                     <a href="#" class="page-link" aria-label="Previous">
@@ -92,14 +92,13 @@
                         <aside class="single_sidebar_widget post_category_widget">
                             <h4 class="widget_title">Category</h4>
                             <ul class="list cat-list">
-                     {% for category in categories %}
-                     <li>
-                                    <a href="{{ category.get_absolute_url }}" class="d-flex">
-                                        <p>{{ category.name }}</p>
-                                        <p>{{ category.post_set.count }}</p>
-                                    </a>
-                                </li>
-                     {% endfor %}
+                                {% for category in categories %}
+                                    <li>
+                                        <a href="{{ category.get_absolute_url }}" class="d-flex">
+                                            {{ category.name }}
+                                            <span class="badge">{{ category.post_set.count }}</span> </a>
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </aside>
 
