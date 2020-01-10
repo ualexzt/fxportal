@@ -46,7 +46,7 @@
                     </div>
                     <div class="col-xl-9 col-lg-10">
                         <div class="main-menu  d-none d-lg-block">
-                            <nav>
+                            <nav class="nav navbar">
                                 <ul id="navigation">
                                     <li><a href="">home</a></li>
                                     <li><a href="#">pages <i class="ti-angle-down"></i></a>
@@ -65,18 +65,21 @@
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                                <ul class="navbar-right">
                                     {% if user.is_authenticated %}
                                         <li><a href="{% url 'post_list' %}">Привет {{ user.username }} <i
                                                 class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="{% url 'profile_main' %}">Профиль</a></li>
                                                 <li><a href="">Создать статью</a></li>
-                                                <li><a href="">Выход</a></li>
+                                                <li><a href="{% url 'logout' %}">Выйти</a></li>
                                             </ul>
-                                            {% else %}
-                                        <li><a href="">Войти <i class="ti-angle-down"></i></a>
+                                        </li>
+                                    {% else %}
+                                        <li><a href="{% url 'login' %}">Войти </a></li>
+                                        <li><a href="{% url 'register' %}">Зарегистрироваться </a></li>
                                     {% endif %}
-
                                 </ul>
                             </nav>
                         </div>

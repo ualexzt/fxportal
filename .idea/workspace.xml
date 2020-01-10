@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/profiles/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/include/left_sidebar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/profiles/logout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fxportal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fxportal/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fxportal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fxportal/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/include/nav_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/include/nav_base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +15,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Fxportal" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -124,7 +142,9 @@
       <workItem from="1578398337695" duration="7361000" />
       <workItem from="1578417412653" duration="4399000" />
       <workItem from="1578499241097" duration="5322000" />
-      <workItem from="1578588657288" duration="3215000" />
+      <workItem from="1578588657288" duration="5382000" />
+      <workItem from="1578594846588" duration="1066000" />
+      <workItem from="1578672603996" duration="8196000" />
     </task>
     <task id="LOCAL-00001" summary="add blog app and create models, migrations">
       <created>1578146858594</created>
@@ -168,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578509445766</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add profiles app &amp; templates">
+      <created>1578592370444</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1578592370444</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +219,8 @@
     <MESSAGE value="add from blog PostList, CategoryList" />
     <MESSAGE value="update template" />
     <MESSAGE value="add comments for post" />
-    <option name="LAST_COMMIT_MESSAGE" value="add comments for post" />
+    <MESSAGE value="add profiles app &amp; templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="add profiles app &amp; templates" />
   </component>
   <component name="WindowStateProjectService">
     <state x="283" y="49" key="#Inspections" timestamp="1578499462291">
@@ -207,10 +235,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="435" y="247" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1578590068309" />
-    <state x="294" y="0" key="CommitChangelistDialog2" timestamp="1578509445469">
+    <state x="294" y="0" key="CommitChangelistDialog2" timestamp="1578592370132">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="294" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1578509445469" />
+    <state x="294" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1578592370132" />
     <state x="484" y="262" width="475" height="199" key="Github.ShareDialog" timestamp="1578133046855">
       <screen x="0" y="23" width="1366" height="675" />
     </state>
@@ -219,22 +247,22 @@
       <screen x="0" y="23" width="1366" height="675" />
     </state>
     <state x="436" y="69" key="Github.UntrackedFilesDialog/0.23.1366.675@0.23.1366.675" timestamp="1578133079013" />
-    <state width="1324" height="250" key="GridCell.Tab.0.bottom" timestamp="1578135139630">
+    <state width="1324" height="202" key="GridCell.Tab.0.bottom" timestamp="1578600622267">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="250" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1578135139630" />
-    <state width="1324" height="250" key="GridCell.Tab.0.center" timestamp="1578135139628">
+    <state width="1324" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1578600622267" />
+    <state width="1324" height="202" key="GridCell.Tab.0.center" timestamp="1578600622265">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="250" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1578135139628" />
-    <state width="1324" height="250" key="GridCell.Tab.0.left" timestamp="1578135139628">
+    <state width="1324" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1578600622265" />
+    <state width="1324" height="202" key="GridCell.Tab.0.left" timestamp="1578600622265">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="250" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1578135139628" />
-    <state width="1324" height="250" key="GridCell.Tab.0.right" timestamp="1578135139629">
+    <state width="1324" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1578600622265" />
+    <state width="1324" height="202" key="GridCell.Tab.0.right" timestamp="1578600622266">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1324" height="250" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1578135139629" />
+    <state width="1324" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1578600622266" />
     <state width="1324" height="250" key="GridCell.Tab.1.bottom" timestamp="1578135139633">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -256,9 +284,9 @@
     </state>
     <state x="232" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1578591999039" />
     <state x="192" y="23" key="SettingsEditor/0.23.1366.675@0.23.1366.675" timestamp="1578132822236" />
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1578509451543">
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1578592373859">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1578509451543" />
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1578592373859" />
   </component>
 </project>

@@ -1,6 +1,4 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.contenttypes.models import ContentType
-from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView
 from blog.models import Post, Category, Comment
 from .forms import CommentForm
