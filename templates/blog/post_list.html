@@ -1,231 +1,167 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %} Main blog page {% endblock %}
-
-{% block content %}
-    <!-- bradcam_area  -->
-    <div class="bradcam_area bradcam_bg_1">
+{% block sidebar %}
+    <!-- Banner/Slider -->
+    <div class="page-head section row-vm light">
+        <div class="imagebg">
+            <img src="{% static 'blog/images/page-inside-bg.jpg' %}" alt="page-head">
+        </div>
         <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="bradcam_text">
-                        <h3>News portal poge</h3>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2>Blog</h2>
+                    <div class="page-breadcrumb">
+                        <ul class="breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active"><span>Blog</span></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--/ bradcam_area  -->
+    <!-- #end Banner/Slider -->
 
-
-    <!--================Blog Area =================-->
-    <section class="blog_area section-padding">
+{% endblock %}
+{% block content %}
+    <!--Section -->
+    <div class="section section-pad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mb-5 mb-lg-0">
-                    <div class="blog_left_sidebar">
+                <div class="col-md-8 res-m-bttm">
+                    <div class="row text-center">
                         {% for post in posts %}
-                            <article class="blog_item">
-                                <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="{{ post.image_post.url }}" alt="">
-                                    <a href="#" class="blog_item_date">
-                                        <h3>{{ post.pub_date|date:'d' }}</h3>
-                                        <p>{{ post.pub_date|date:'b' }}</p>
-                                    </a>
-                                </div>
-
-                                <div class="blog_details">
-                                    <a class="d-inline-block" href="{{ post.get_absolute_url }}">
-                                        <h2>{{ post.title }}</h2>
-                                        <hr>
-                                    </a>
-                                    <p>{{ post.content|truncatewords:100 }}</p>
-                                    <ul class="blog-info-link">
-                                        <li><a href="{{ post.category.get_absolute_url }}"><i
-                                                class="fa fa-user"></i> {{ post.category }}</a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i> {{ post.comment.count }} Comments</a></li>
-                                    </ul>
-                                </div>
-                            </article>
-                        {% endfor %}
-                        <nav class="blog-pagination justify-content-center d-flex">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a href="#" class="page-link" aria-label="Previous">
-                                        <i class="ti-angle-left"></i>
-                                    </a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">1</a>
-                                </li>
-                                <li class="page-item active">
-                                    <a href="#" class="page-link">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link" aria-label="Next">
-                                        <i class="ti-angle-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog_right_sidebar">
-                        <aside class="single_sidebar_widget search_widget">
-                            <form action="#">
-                                <div class="form-group">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder='Search Keyword'
-                                               onfocus="this.placeholder = ''"
-                                               onblur="this.placeholder = 'Search Keyword'">
-                                        <div class="input-group-append">
-                                            <button class="btn" type="button"><i class="ti-search"></i></button>
+                            <div class="col-sm-6">
+                                <div class="blog-post shadow round">
+                                    <div class="post-thumb"><a href="{{ post.get_absolute_url }}"><img
+                                            src="{{ post.image_post.url }}" alt="post"></a></div>
+                                    <div class="post-entry">
+                                        <div class="post-meta"><span>Posted {{ post.pub_date|date:"d, b, Y" }}</span>
                                         </div>
+                                        <h5><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>
+                                        <p>{{ post.content|truncatewords:100 }}</p>
+                                        <a href="{{ post.get_absolute_url }}" class="btn-icon"><span
+                                                class="pe pe-7s-angle-right"></span></a>
                                     </div>
                                 </div>
-                                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Search
-                                </button>
-                            </form>
-                        </aside>
-
-                        <aside class="single_sidebar_widget post_category_widget">
+                                <div class="gaps size-3x"></div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <ul class="pagination pagination-lg">
+                                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><span class="fa fa-angle-right"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="sidebar-right wgs-box">
+                        <div class="wgs-search">
+                            <div class="wgs-content">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <button class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                            <div class="gaps size-1x"></div>
+                        </div>
+                        <div class="wgs-tags">
                             <h4 class="widget_title">Category</h4>
                             <ul class="list cat-list">
                                 {% for category in categories %}
-                                    <li>
-                                        <a href="{{ category.get_absolute_url }}" class="d-flex">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ category.get_absolute_url }}">
                                             {{ category.name }}
                                             <span class="badge">{{ category.post_set.count }}</span> </a>
                                     </li>
                                 {% endfor %}
                             </ul>
-                        </aside>
-
-                        <aside class="single_sidebar_widget popular_post_widget">
-                            <h3 class="widget_title">Recent Post</h3>
-                            <div class="media post_item">
-                                <img src="img/post/post_1.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>From life was you fish...</h3>
-                                    </a>
-                                    <p>January 12, 2019</p>
+                        </div>
+                        <hr>
+                        <div class="gaps size-1x"></div>
+                        <!-- Each Widget -->
+                        <div class="wgs-post">
+                            <h5 class="wgs-title">Recent Blog</h5>
+                            <div class="wgs-content">
+                                <div class="wgs-post-single">
+                                    <div class="wgs-post-thumb">
+                                        <img src="images/post-thumb-sm-a.jpg" alt="post-thumb">
+                                    </div>
+                                    <div class="wgs-post-entry">
+                                        <h6 class="wgs-post-title"><a href="blog-single.html">Working Hard to Keep Pace
+                                            with Demand </a></h6>
+                                        <span class="wgs-post-meta">December 19, 2017</span>
+                                    </div>
+                                </div>
+                                <div class="wgs-post-single">
+                                    <div class="wgs-post-thumb">
+                                        <img src="images/post-thumb-sm-b.jpg" alt="post-thumb">
+                                    </div>
+                                    <div class="wgs-post-entry">
+                                        <h6 class="wgs-post-title"><a href="blog-single.html">Working Hard to Keep Pace
+                                            with Demand </a></h6>
+                                        <span class="wgs-post-meta">December 19, 2017</span>
+                                    </div>
+                                </div>
+                                <div class="wgs-post-single">
+                                    <div class="wgs-post-thumb">
+                                        <img src="images/post-thumb-sm-c.jpg" alt="post-thumb">
+                                    </div>
+                                    <div class="wgs-post-entry">
+                                        <h6 class="wgs-post-title"><a href="blog-single.html">Working Hard to Keep Pace
+                                            with Demand </a></h6>
+                                        <span class="wgs-post-meta">December 19, 2017</span>
+                                    </div>
+                                </div>
+                                <div class="wgs-post-single">
+                                    <div class="wgs-post-thumb">
+                                        <img src="images/post-thumb-sm-d.jpg" alt="post-thumb">
+                                    </div>
+                                    <div class="wgs-post-entry">
+                                        <h6 class="wgs-post-title"><a href="blog-single.html">Working Hard to Keep Pace
+                                            with Demand </a></h6>
+                                        <span class="wgs-post-meta">December 19, 2017</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="media post_item">
-                                <img src="img/post/post_2.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>The Amazing Hubble</h3>
-                                    </a>
-                                    <p>02 Hours ago</p>
+                            <div class="gaps size-2x"></div>
+                        </div>
+                        <!-- End Widget -->
+                        <hr>
+
+                    </div>
+
+                    <div class="wgs-box wgs-contact-info">
+                        <div class="wgs-content boxed">
+                            <div class="contact-information">
+                                <div class="contact-entry">
+                                    <h6>Crypto<span>Coin</span></h6>
+                                    <p>34 south franklin road<br/>santa ana,ca 8975,usa</p>
+                                </div>
+                                <div class="gaps size-1x"></div>
+                                <div class="contact-entry">
+                                    <h6>contact number</h6>
+                                    <p>phone: 781-123-9865<br/>toll free: 800-123-5689</p>
+                                </div>
+                                <div class="gaps size-1x"></div>
+                                <div class="contact-entry">
+                                    <h6>office hours</h6>
+                                    <p>monday - friday<br/>8:30am - 5:00pm</p>
                                 </div>
                             </div>
-                            <div class="media post_item">
-                                <img src="img/post/post_3.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Astronomy Or Astrology</h3>
-                                    </a>
-                                    <p>03 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="img/post/post_4.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Asteroids telescope</h3>
-                                    </a>
-                                    <p>01 Hours ago</p>
-                                </div>
-                            </div>
-                        </aside>
-                        <aside class="single_sidebar_widget tag_cloud_widget">
-                            <h4 class="widget_title">Tag Clouds</h4>
-                            <ul class="list">
-                                <li>
-                                    <a href="#">project</a>
-                                </li>
-                                <li>
-                                    <a href="#">love</a>
-                                </li>
-                                <li>
-                                    <a href="#">technology</a>
-                                </li>
-                                <li>
-                                    <a href="#">travel</a>
-                                </li>
-                                <li>
-                                    <a href="#">restaurant</a>
-                                </li>
-                                <li>
-                                    <a href="#">life style</a>
-                                </li>
-                                <li>
-                                    <a href="#">design</a>
-                                </li>
-                                <li>
-                                    <a href="#">illustration</a>
-                                </li>
-                            </ul>
-                        </aside>
-
-
-                        <aside class="single_sidebar_widget instagram_feeds">
-                            <h4 class="widget_title">Instagram Feeds</h4>
-                            <ul class="instagram_row flex-wrap">
-                                <li>
-                                    <a href="#">
-                                        <img class="img-fluid" src="img/post/post_5.png" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img class="img-fluid" src="img/post/post_6.png" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img class="img-fluid" src="img/post/post_7.png" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img class="img-fluid" src="img/post/post_8.png" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img class="img-fluid" src="img/post/post_9.png" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img class="img-fluid" src="img/post/post_10.png" alt="">
-                                    </a>
-                                </li>
-                            </ul>
-                        </aside>
-
-
-                        <aside class="single_sidebar_widget newsletter_widget">
-                            <h4 class="widget_title">Newsletter</h4>
-
-                            <form action="#">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" onfocus="this.placeholder = ''"
-                                           onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
-                                </div>
-                                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Subscribe
-                                </button>
-                            </form>
-                        </aside>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!--================Blog Area =================-->
+    </div>
+    <!--End Section -->
 {% endblock %}
