@@ -1,0 +1,29 @@
+{% extends 'base_profile.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h4 class="card-title">Create Post</h4>
+                            <p class="card-category"></p>
+                        </div>
+                        <div class="card-body">
+                            <form method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                 <h4>Вы действительно хотите удалить статью:" <strong> {{ object.title }} </strong>"</h4>
+                                <button type="submit" class="btn btn-danger pull-right">Удалить</button>
+                                <a class="btn btn-primary pull-right" href="{{ object.get_absolute_url }}">Отменить</a>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

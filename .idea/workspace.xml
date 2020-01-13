@@ -2,32 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/profiles/profile_dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Fxportal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Fxportal.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profiles/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog/post_confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog/post_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fxportal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fxportal/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/magnific-popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/owl.carousel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scss/_responsive.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/scss/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/blog/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/include/footer_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/include/footer_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/include/left_sidebar.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/include/nav_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/include/nav_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profiles/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profiles/logout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +152,9 @@
       <workItem from="1578594846588" duration="1066000" />
       <workItem from="1578672603996" duration="10981000" />
       <workItem from="1578738615656" duration="11112000" />
-      <workItem from="1578754097616" duration="3056000" />
+      <workItem from="1578754097616" duration="10579000" />
+      <workItem from="1578842234301" duration="10249000" />
+      <workItem from="1578900913454" duration="9215000" />
     </task>
     <task id="LOCAL-00001" summary="add blog app and create models, migrations">
       <created>1578146858594</created>
@@ -230,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578688504433</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update template">
+      <created>1578757698355</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1578757698355</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +253,8 @@
     <MESSAGE value="add profiles app &amp; templates" />
     <MESSAGE value="add registration, login and logout in project" />
     <MESSAGE value="Removing help_text from Django UserCreateForm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removing help_text from Django UserCreateForm" />
+    <MESSAGE value="Update template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update template" />
   </component>
   <component name="WindowStateProjectService">
     <state x="283" y="49" key="#Inspections" timestamp="1578499462291">
@@ -272,11 +269,11 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="435" y="247" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1578590068309" />
-    <state x="294" y="23" key="CommitChangelistDialog2" timestamp="1578688504067">
+    <state x="294" y="23" key="CommitChangelistDialog2" timestamp="1578757697935">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state x="294" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1578592370132" />
-    <state x="294" y="23" key="CommitChangelistDialog2/0.23.1366.745@0.23.1366.745" timestamp="1578688504067" />
+    <state x="294" y="23" key="CommitChangelistDialog2/0.23.1366.745@0.23.1366.745" timestamp="1578757697935" />
     <state x="484" y="262" width="475" height="199" key="Github.ShareDialog" timestamp="1578133046855">
       <screen x="0" y="23" width="1366" height="675" />
     </state>
@@ -285,22 +282,26 @@
       <screen x="0" y="23" width="1366" height="675" />
     </state>
     <state x="436" y="69" key="Github.UntrackedFilesDialog/0.23.1366.675@0.23.1366.675" timestamp="1578133079013" />
-    <state width="1324" height="202" key="GridCell.Tab.0.bottom" timestamp="1578600622267">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1324" height="166" key="GridCell.Tab.0.bottom" timestamp="1578851331519">
+      <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state width="1324" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1578600622267" />
-    <state width="1324" height="202" key="GridCell.Tab.0.center" timestamp="1578600622265">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1324" height="166" key="GridCell.Tab.0.bottom/0.23.1366.745@0.23.1366.745" timestamp="1578851331519" />
+    <state width="1324" height="166" key="GridCell.Tab.0.center" timestamp="1578851331519">
+      <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state width="1324" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1578600622265" />
-    <state width="1324" height="202" key="GridCell.Tab.0.left" timestamp="1578600622265">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1324" height="166" key="GridCell.Tab.0.center/0.23.1366.745@0.23.1366.745" timestamp="1578851331519" />
+    <state width="1324" height="166" key="GridCell.Tab.0.left" timestamp="1578851331518">
+      <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state width="1324" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1578600622265" />
-    <state width="1324" height="202" key="GridCell.Tab.0.right" timestamp="1578600622266">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state width="1324" height="166" key="GridCell.Tab.0.left/0.23.1366.745@0.23.1366.745" timestamp="1578851331518" />
+    <state width="1324" height="166" key="GridCell.Tab.0.right" timestamp="1578851331519">
+      <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state width="1324" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1578600622266" />
+    <state width="1324" height="166" key="GridCell.Tab.0.right/0.23.1366.745@0.23.1366.745" timestamp="1578851331519" />
     <state width="1324" height="250" key="GridCell.Tab.1.bottom" timestamp="1578135139633">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -322,10 +323,10 @@
     </state>
     <state x="232" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1578591999039" />
     <state x="192" y="23" key="SettingsEditor/0.23.1366.675@0.23.1366.675" timestamp="1578132822236" />
-    <state x="283" y="143" key="Vcs.Push.Dialog.v2" timestamp="1578688505850">
+    <state x="283" y="143" key="Vcs.Push.Dialog.v2" timestamp="1578757706100">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1578592373859" />
-    <state x="283" y="143" key="Vcs.Push.Dialog.v2/0.23.1366.745@0.23.1366.745" timestamp="1578688505850" />
+    <state x="283" y="143" key="Vcs.Push.Dialog.v2/0.23.1366.745@0.23.1366.745" timestamp="1578757706100" />
   </component>
 </project>

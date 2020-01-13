@@ -93,7 +93,7 @@
                 <li><a href="market-data.html">Market data</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 {% if user.is_authenticated %}
-                    <li class="dropdown"><a href="#" class="dropdown-toggle">Привет, {{ user.username }} <b
+                    <li class="dropdown" ><a href="#" class="dropdown-toggle">Привет, {{ user.username }} <b
                             class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="{% url 'profile_main' %}">Профиль</a></li>
