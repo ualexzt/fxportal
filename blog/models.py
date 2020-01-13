@@ -1,9 +1,9 @@
+from PIL import Image
 from django.contrib.contenttypes.fields import GenericForeignKey, GenericRelation
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from django.contrib.contenttypes.models import ContentType
-from django.utils.text import slugify
 
 
 class Category(models.Model):
@@ -36,6 +36,14 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def save(self, force_insert=False, force_update=False, using=None,
+             update_fields=None):
+        super().save()
+        img = Image.open(self.image_post.path)
+        output_size = (1300, 430)
+        img.thumbnail(output_size)
+        img.save(self.image_post.path)
 
     def get_absolute_url(self):
         return reverse('post_detail', kwargs={'category': self.category.slug, 'slug': self.slug})

@@ -2,4 +2,4 @@ from django import forms
 
 
 class CommentForm(forms.Form):
-    comment = forms.CharField(widget=forms.Textarea)
+    comment = forms.CharField(widget=forms.Textarea(attrs={'rows': 2}))

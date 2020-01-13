@@ -2,185 +2,75 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block title %} {{ object.title }} - {{ block.super }} {% endblock %}
-{% block sidebar %}
-    <!-- Banner/Slider -->
-    <div class="page-head section row-vm light">
-        <div class="imagebg">
-            <img src="{% static 'blog/images/page-inside-bg.jpg' %}" alt="page-head">
-        </div>
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-12">
-                    <h2>Blog Single</h2>
-                    <div class="page-breadcrumb">
-                        <ul class="breadcrumb">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="active"><span>Blog Single</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- #end Banner/Slider -->
-{% endblock %}
-{% block content %}
-    <!-- Section -->
-    <div class="section section-pad">
+{% block header %}
+    <div class="page-header header-filter" data-parallax="true"
+         style="background-image: url('{{ post.image_post.url }}');">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 res-m-bttm">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h3 class="title">«Начинайте с малого. Если дела пойдут, наращивайте большую позицию».
+                        </h3>
+                        <h6 class="text-right">Джордж Сорос</h6>
 
-                    <div class="post post-single">
-                        <div class="post-thumb">
-                            <img alt="" src="{{ post.image_post.url }}">
-                        </div>
-                        <div class="post-meta">
-                            <span class="pub-date"><em class="fa fa-calendar"
-                                                       aria-hidden="true"></em> {{ post.pub_date|date:'d, b, Y' }} </span>
-                        </div>
-                        <div class="post-entry">
-                            <h3>{{ post.title }}</h3>
-                            <p>{{ post.content }}</p>
-                        </div>
-                        <hr>
-                    </div>
-                    <div><h5 class="text-center">{{ post.comments.count }} Comments</h5></div>
-                    {% for comment in comments %}
-                        <li class="comment">
-                            <article class="comment-wrap  clearfix">
-                                <div class="gravatar"><img alt="image" src="{{ comment.author.profile.image.url }}" width="100px"/>
-                                </div>
-                                <div class="comment-content">
-                                    <div class="comment-meta">
-                                        <h6 class="comment-author">{{ comment.author.get_full_name }}</h6>
-                                        <span class="comment-time">{{ comment.com_date }}</span>
-                                    </div>
-                                    <div class="comment-text">
-                                        <p>{{ comment.comment }}</p>
-                                    </div>
-                                </div>
-                            </article>
-                        </li><!-- #comment-## -->
-                    {% endfor %}
-                    <div class="media mt-3 shadow-textarea">
-                        <img class="d-flex rounded-circle avatar z-depth-1-half mr-3"
-                             src="{{ user.profile.image.url }}"
-                             alt="Generic placeholder image" width="100px">
-                        <div class="media-body">
-                            <h5 class="mt-0 font-weight-bold blue-text">{{ user.get_full_name }}</h5>
-                            <div class="form-group basic-textarea rounded-corners">
-                                <form method="post" action="{% url 'comment_add' %}">
-                                    {% csrf_token %}
-                                     <input type="hidden" name="object_id" value="{{ post.id }}">
-                                    {{ form|crispy }}
-                                    <input type="submit">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-
-                </div>
-                <div class="col-md-3 col-md-offset-1">
-                    <div class="sidebar-right wgs-box">
-                        <div class="wgs-search">
-                            <div class="wgs-content">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Search...">
-                                    <button class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                </div>
-                            </div>
-                            <div class="gaps size-1x"></div>
-                        </div>
-                        <!-- Each Widget -->
-                        <div class="wgs-post">
-                            <h5 class="wgs-title">Recent Blog</h5>
-                            <div class="wgs-content">
-                                <div class="wgs-post-single">
-                                    <div class="wgs-post-thumb">
-                                        <img src="images/post-thumb-sm-a.jpg" alt="post-thumb">
-                                    </div>
-                                    <div class="wgs-post-entry">
-                                        <h6 class="wgs-post-title"><a href="blog-single.html">Working Hard to Keep Pace
-                                            with Demand </a></h6>
-                                        <span class="wgs-post-meta">December 19, 2017</span>
-                                    </div>
-                                </div>
-                                <div class="wgs-post-single">
-                                    <div class="wgs-post-thumb">
-                                        <img src="images/post-thumb-sm-b.jpg" alt="post-thumb">
-                                    </div>
-                                    <div class="wgs-post-entry">
-                                        <h6 class="wgs-post-title"><a href="blog-single.html">Working Hard to Keep Pace
-                                            with Demand </a></h6>
-                                        <span class="wgs-post-meta">December 19, 2017</span>
-                                    </div>
-                                </div>
-                                <div class="wgs-post-single">
-                                    <div class="wgs-post-thumb">
-                                        <img src="images/post-thumb-sm-c.jpg" alt="post-thumb">
-                                    </div>
-                                    <div class="wgs-post-entry">
-                                        <h6 class="wgs-post-title"><a href="blog-single.html">Working Hard to Keep Pace
-                                            with Demand </a></h6>
-                                        <span class="wgs-post-meta">December 19, 2017</span>
-                                    </div>
-                                </div>
-                                <div class="wgs-post-single">
-                                    <div class="wgs-post-thumb">
-                                        <img src="images/post-thumb-sm-d.jpg" alt="post-thumb">
-                                    </div>
-                                    <div class="wgs-post-entry">
-                                        <h6 class="wgs-post-title"><a href="blog-single.html">Working Hard to Keep Pace
-                                            with Demand </a></h6>
-                                        <span class="wgs-post-meta">December 19, 2017</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gaps size-2x"></div>
-                        </div>
-                        <!-- End Widget -->
-
-                        <div class="wgs-tags">
-                            <h5 class="wgs-title">Tags</h5>
-                            <div class="wgs-content">
-                                <ul class="tag-list clearfix">
-                                    <li><a href="#">BitCoin</a></li>
-                                    <li><a href="#">Excenge</a></li>
-                                    <li><a href="#">Trade</a></li>
-                                    <li><a href="#">Buy Sell</a></li>
-                                    <li><a href="#">Wallet</a></li>
-                                    <li><a href="#">Crypto</a></li>
-                                </ul>
-                            </div>
-                            <div class="gaps size-1x"></div>
-                        </div>
-
-                        <div class="wgs-box wgs-contact-info">
-                            <div class="wgs-content boxed">
-                                <div class="contact-information">
-                                    <div class="contact-entry">
-                                        <h6>Crypto<span>Coin</span></h6>
-                                        <p>34 south franklin road<br/>santa ana,ca 8975,usa</p>
-                                    </div>
-                                    <div class="gaps size-1x"></div>
-                                    <div class="contact-entry">
-                                        <h6>contact number</h6>
-                                        <p>phone: 781-123-9865<br/>toll free: 800-123-5689</p>
-                                    </div>
-                                    <div class="gaps size-1x"></div>
-                                    <div class="contact-entry">
-                                        <h6>office hours</h6>
-                                        <p>monday - friday<br/>8:30am - 5:00pm</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- End Section -->
+{% endblock %}
+{% block content %}
+    <div class="section section-text">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3 class="title">{{ post.title }}</h3>
+                <hr>
+                <p>{{ post.content }}</p>
+                <hr>
+            </div>
+        </div>
+
+        <div class="section section-comments">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="media-area">
+                        <h3 class="title text-center">{{ post.comments.count }} Comments</h3>
+                        {% for comment in comments %}
+                            <div class="media">
+                                <a class="pull-left" href="">
+                                    <div class="avatar">
+                                        <img class="media-object" src="{{ comment.author.profile.image.url }}"
+                                             alt="..."/>
+                                    </div>
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">{{ comment.author.get_full_name }}
+                                        <small>&middot; {{ comment.com_date|date:'b, d, Y' }}</small></h4>
+                                    <h6 class="text-muted"></h6>
+                                    <p>{{ comment.comment }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    {% if user.is_authenticated %}
+                        <h3 class="title text-center">Добавить комментарий</h3>
+                        <div class="media media-post">
+                            <a class="pull-left author" href="#pablo">
+                                <div class="avatar">
+                                    <img class="media-object" alt="64x64"
+                                         src="{{ user.profile.image.url }}">
+                                </div>
+                            </a>
+                            <div class="media-body">
+                                <form method="post" action="{% url 'comment_add' %}">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="object_id" value="{{ post.id }}">
+                                    {{ form|crispy }}
+                                    <input class="btn btn-primary btn-round btn-wd pull-right" type="submit">
+                                </form>
+                            </div>
+                        </div> <!-- end media-post -->
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
 {% endblock %}

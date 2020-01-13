@@ -1,167 +1,109 @@
 {% extends 'base.html' %}
-{% load static %}
+
 {% block title %} Main blog page {% endblock %}
-{% block sidebar %}
-    <!-- Banner/Slider -->
-    <div class="page-head section row-vm light">
-        <div class="imagebg">
-            <img src="{% static 'blog/images/page-inside-bg.jpg' %}" alt="page-head">
+
+{% block content %}
+    <div class="section">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-3 text-center">
+                <ul class="nav nav-pills nav-pills-primary">
+                    <li><a href="{% url 'post_list' %}">Все статьи</a></li>
+                    {% for category in categories %}
+                        <li><a href="{{ category.get_absolute_url }}">{{ category.name }}</a></li>
+                    {% endfor %}
+                </ul>
+                <hr>
+            </div>
         </div>
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-12">
-                    <h2>Blog</h2>
-                    <div class="page-breadcrumb">
-                        <ul class="breadcrumb">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="active"><span>Blog</span></li>
-                        </ul>
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="card card-raised card-background"
+                     style="background-image: url('../assets/img/examples/office2.jpg')">
+                    <div class="card-content">
+                        <h6 class="category text-info">Worlds</h6>
+                        <a href="#pablo">
+                            <h3 class="card-title">The Best Productivity Apps on Market</h3>
+                        </a>
+                        <p class="card-description">
+                            Don't be scared of the truth because we need to restart the human foundation in truth And I
+                            love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                        </p>
+                        <a href="#pablo" class="btn btn-danger btn-round">
+                            <i class="material-icons">format_align_left</i> Read Article
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- #end Banner/Slider -->
 
-{% endblock %}
-{% block content %}
-    <!--Section -->
-    <div class="section section-pad">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 res-m-bttm">
-                    <div class="row text-center">
+            <div class="col-md-6">
+                <div class="card card-raised card-background"
+                     style="background-image: url('../assets/img/examples/blog8.jpg')">
+                    <div class="card-content">
+                        <h6 class="category text-info">Business</h6>
+                        <h3 class="card-title">Working on Wallstreet is Not So Easy</h3>
+                        <p class="card-description">
+                            Don't be scared of the truth because we need to restart the human foundation in truth And I
+                            love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                        </p>
+                        <a href="#pablo" class="btn btn-primary btn-round">
+                            <i class="material-icons">format_align_left</i> Read Article
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="blogs-3">
+                <div class="container">
+                    <div class="row">
                         {% for post in posts %}
-                            <div class="col-sm-6">
-                                <div class="blog-post shadow round">
-                                    <div class="post-thumb"><a href="{{ post.get_absolute_url }}"><img
-                                            src="{{ post.image_post.url }}" alt="post"></a></div>
-                                    <div class="post-entry">
-                                        <div class="post-meta"><span>Posted {{ post.pub_date|date:"d, b, Y" }}</span>
+                            <div class="card card-plain card-blog">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card-image">
+                                            <img class="img img-raised" src="{{ post.image_post.url }}"/>
                                         </div>
-                                        <h5><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>
-                                        <p>{{ post.content|truncatewords:100 }}</p>
-                                        <a href="{{ post.get_absolute_url }}" class="btn-icon"><span
-                                                class="pe pe-7s-angle-right"></span></a>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h6 class="category text-info">{{ post.category.name }}</h6>
+                                        <h3 class="card-title">
+                                            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                                        </h3>
+                                        <p class="card-description">
+                                            {{ post.content|truncatewords:50 }}
+                                            <a
+                                                    href="{{ post.get_absolute_url }}"> Read More </a>
+                                        </p>
+                                        <p class="author">
+                                            by <a
+                                                href=""><b>{{ post.author.get_full_name }}</b></a>, {{ post.pub_date|date:'b, d, Y' }}
+
                                     </div>
                                 </div>
-                                <div class="gaps size-3x"></div>
                             </div>
                         {% endfor %}
                     </div>
-                    <div class="row text-center">
-                        <div class="col-md-12">
-                            <ul class="pagination pagination-lg">
-                                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#"><span class="fa fa-angle-right"></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-md-offset-1">
-                    <div class="sidebar-right wgs-box">
-                        <div class="wgs-search">
-                            <div class="wgs-content">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Search...">
-                                    <button class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                </div>
-                            </div>
-                            <div class="gaps size-1x"></div>
-                        </div>
-                        <div class="wgs-tags">
-                            <h4 class="widget_title">Category</h4>
-                            <ul class="list cat-list">
-                                {% for category in categories %}
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ category.get_absolute_url }}">
-                                            {{ category.name }}
-                                            <span class="badge">{{ category.post_set.count }}</span> </a>
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <hr>
-                        <div class="gaps size-1x"></div>
-                        <!-- Each Widget -->
-                        <div class="wgs-post">
-                            <h5 class="wgs-title">Recent Blog</h5>
-                            <div class="wgs-content">
-                                <div class="wgs-post-single">
-                                    <div class="wgs-post-thumb">
-                                        <img src="images/post-thumb-sm-a.jpg" alt="post-thumb">
-                                    </div>
-                                    <div class="wgs-post-entry">
-                                        <h6 class="wgs-post-title"><a href="blog-single.html">Working Hard to Keep Pace
-                                            with Demand </a></h6>
-                                        <span class="wgs-post-meta">December 19, 2017</span>
-                                    </div>
-                                </div>
-                                <div class="wgs-post-single">
-                                    <div class="wgs-post-thumb">
-                                        <img src="images/post-thumb-sm-b.jpg" alt="post-thumb">
-                                    </div>
-                                    <div class="wgs-post-entry">
-                                        <h6 class="wgs-post-title"><a href="blog-single.html">Working Hard to Keep Pace
-                                            with Demand </a></h6>
-                                        <span class="wgs-post-meta">December 19, 2017</span>
-                                    </div>
-                                </div>
-                                <div class="wgs-post-single">
-                                    <div class="wgs-post-thumb">
-                                        <img src="images/post-thumb-sm-c.jpg" alt="post-thumb">
-                                    </div>
-                                    <div class="wgs-post-entry">
-                                        <h6 class="wgs-post-title"><a href="blog-single.html">Working Hard to Keep Pace
-                                            with Demand </a></h6>
-                                        <span class="wgs-post-meta">December 19, 2017</span>
-                                    </div>
-                                </div>
-                                <div class="wgs-post-single">
-                                    <div class="wgs-post-thumb">
-                                        <img src="images/post-thumb-sm-d.jpg" alt="post-thumb">
-                                    </div>
-                                    <div class="wgs-post-entry">
-                                        <h6 class="wgs-post-title"><a href="blog-single.html">Working Hard to Keep Pace
-                                            with Demand </a></h6>
-                                        <span class="wgs-post-meta">December 19, 2017</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gaps size-2x"></div>
-                        </div>
-                        <!-- End Widget -->
-                        <hr>
-
-                    </div>
-
-                    <div class="wgs-box wgs-contact-info">
-                        <div class="wgs-content boxed">
-                            <div class="contact-information">
-                                <div class="contact-entry">
-                                    <h6>Crypto<span>Coin</span></h6>
-                                    <p>34 south franklin road<br/>santa ana,ca 8975,usa</p>
-                                </div>
-                                <div class="gaps size-1x"></div>
-                                <div class="contact-entry">
-                                    <h6>contact number</h6>
-                                    <p>phone: 781-123-9865<br/>toll free: 800-123-5689</p>
-                                </div>
-                                <div class="gaps size-1x"></div>
-                                <div class="contact-entry">
-                                    <h6>office hours</h6>
-                                    <p>monday - friday<br/>8:30am - 5:00pm</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
+
+
+        </div>
+        <div class="row text-center">
+            <ul class="pagination pagination-info">
+                <li><a href="javascript:void(0);">1</a></li>
+                <li><a href="javascript:void(0);">...</a></li>
+                <li><a href="javascript:void(0);">5</a></li>
+                <li><a href="javascript:void(0);">6</a></li>
+                <li class="active"><a href="javascript:void(0);">7</a></li>
+                <li><a href="javascript:void(0);">8</a></li>
+                <li><a href="javascript:void(0);">9</a></li>
+                <li><a href="javascript:void(0);">...</a></li>
+                <li><a href="javascript:void(0);">12</a></li>
+            </ul>
         </div>
     </div>
-    <!--End Section -->
+
+
 {% endblock %}
