@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
     'crispy_forms',
-    'profiles.apps.ProfilesConfig',
+    'profiles',
     'ckeditor',
     'ckeditor_uploader',
 ]
