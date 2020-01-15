@@ -14,8 +14,9 @@
                         <div class="card-body">
                             <form method="post" enctype="multipart/form-data">
                                 {% csrf_token %}
-                                  {{ form|crispy }}
-                                <button type="submit" class="btn btn-primary pull-right">Добавить статью</button>
+                                {{ form.media }}
+                                {{ form|crispy }}
+                                <button type="submit" class="btn btn-success btn-sm pull-center">Запостить</button>
                                 <div class="clearfix"></div>
                             </form>
                         </div>

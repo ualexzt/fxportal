@@ -4,6 +4,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from django.contrib.contenttypes.models import ContentType
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Category(models.Model):
@@ -28,7 +29,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Автор поста')
     image_post = models.ImageField(default='post_img/default_post.jpg', upload_to='post_img',
                                    verbose_name='Изображение поста')
-    content = models.TextField(max_length=None, verbose_name='Текст поста')
+    content = RichTextUploadingField(max_length=None, verbose_name='Текст поста')
     pub_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
     likes = models.PositiveIntegerField(default=0, verbose_name='Нравится')
     dislikes = models.PositiveIntegerField(default=0, verbose_name='Не нравится')
