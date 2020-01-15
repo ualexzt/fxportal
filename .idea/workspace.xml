@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="">
+    <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="update template">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fxportal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fxportal/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fxportal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fxportal/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/post_img/default_post.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/post_img/default_post.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/include/nav_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/include/nav_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profiles/profile_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profiles/profile_dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +148,8 @@
       <workItem from="1578991295390" duration="4867000" />
       <workItem from="1579024952167" duration="1634000" />
       <workItem from="1579027531906" duration="4900000" />
-      <workItem from="1579069850163" duration="3219000" />
+      <workItem from="1579069850163" duration="4555000" />
+      <workItem from="1579088621188" duration="194000" />
     </task>
     <task id="LOCAL-00001" summary="add blog app and create models, migrations">
       <created>1578146858594</created>
@@ -251,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578991438213</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update template">
+      <created>1579086561464</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1579086561464</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,11 +297,11 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="435" y="247" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1578590068309" />
-    <state x="294" y="23" key="CommitChangelistDialog2" timestamp="1578991437719">
+    <state x="294" y="23" key="CommitChangelistDialog2" timestamp="1579088838133">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state x="294" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1578592370132" />
-    <state x="294" y="23" key="CommitChangelistDialog2/0.23.1366.745@0.23.1366.745" timestamp="1578991437719" />
+    <state x="294" y="23" key="CommitChangelistDialog2/0.23.1366.745@0.23.1366.745" timestamp="1579088838133" />
     <state x="484" y="262" width="475" height="199" key="Github.ShareDialog" timestamp="1578133046855">
       <screen x="0" y="23" width="1366" height="675" />
     </state>
@@ -353,10 +351,10 @@
     </state>
     <state x="232" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1578591999039" />
     <state x="192" y="23" key="SettingsEditor/0.23.1366.675@0.23.1366.675" timestamp="1578132822236" />
-    <state x="283" y="143" key="Vcs.Push.Dialog.v2" timestamp="1578947607536">
+    <state x="283" y="143" key="Vcs.Push.Dialog.v2" timestamp="1579086563215">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1578592373859" />
-    <state x="283" y="143" key="Vcs.Push.Dialog.v2/0.23.1366.745@0.23.1366.745" timestamp="1578947607536" />
+    <state x="283" y="143" key="Vcs.Push.Dialog.v2/0.23.1366.745@0.23.1366.745" timestamp="1579086563215" />
   </component>
 </project>
