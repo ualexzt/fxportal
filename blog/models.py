@@ -38,9 +38,8 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-    def save(self, force_insert=False, force_update=False, using=None,
-             update_fields=None):
-        super().save()
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
         img = Image.open(self.image_post.path)
         output_size = (1300, 430)
         img.thumbnail(output_size)
