@@ -1,5 +1,5 @@
 """
-WSGI config for Fxportal project.
+WSGI config for fxportal project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Fxportal.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'fxportal.settings')
 
 application = get_wsgi_application()
