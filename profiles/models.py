@@ -18,7 +18,7 @@ class CategoryLearnGroup(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='default.png', upload_to='profiles_img', verbose_name='Изображение профиля')
-    description = models.CharField(max_length=150, default='', verbose_name='О себе')
+    description = models.CharField(max_length=150, default='Пользователь ресурса', blank=True, verbose_name='О себе')
     categiry_learn = models.ForeignKey(CategoryLearnGroup, on_delete=models.SET_NULL, null=True, blank=True,
                                        verbose_name='Группа обучения')
 
