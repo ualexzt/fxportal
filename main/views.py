@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 
-def index(request):
+def main_index(request):
     return render(request, 'main/index.html')
