@@ -38,3 +38,8 @@ def profile_main(request):
 @login_required
 def dashboard(request):
     return render(request, 'profiles/profile_dashboard.html')
+
+@login_required
+def traiders_diary(request):
+    return render(request, 'profiles/trader_diary.html')
+

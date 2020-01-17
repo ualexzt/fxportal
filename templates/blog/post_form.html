@@ -5,7 +5,7 @@
     <div class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-10">
                     <div class="card">
                         <div class="card-header card-header-primary">
                             <h4 class="card-title">Create Post</h4>
@@ -14,8 +14,10 @@
                         <div class="card-body">
                             <form method="post" enctype="multipart/form-data">
                                 {% csrf_token %}
-                                {{ form.media }}
-                                {{ form|crispy }}
+                                <div class="form-group label-floating">
+                                    {{ form.media }}
+                                    {{ form|crispy }}
+                                </div>
                                 <button type="submit" class="btn btn-success btn-sm pull-center">Запостить</button>
                                 <div class="clearfix"></div>
                             </form>

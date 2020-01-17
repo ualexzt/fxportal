@@ -1,0 +1,94 @@
+{% extends 'base_profile.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h4 class="card-title">Trader's Diary</h4>
+                            <p class="card-category">Add your thoughts on trading</p>
+                        </div>
+                        <div class="card-body">
+                            <!--It's main page-->
+                            <div class="row">
+                                <div class="col-6 form-group">
+                                    <label class="label-control">Дата:</label>
+                                    <input type="text" class="form-control datepicker" value="10/10/2016"/>
+                                </div>
+                                <div class="col-6 form-group label-floating">
+                                    <label class="control-label">Валютная пара</label>
+                                    <input type="text" class="form-control" value="GBPUSD">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header card-header-tabs card-header-primary">
+                                        <div class="nav-tabs-navigation">
+                                            <div class="nav-tabs-wrapper">
+                                                <ul class="nav nav-tabs" data-tabs="tabs">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" href="#profile" data-toggle="tab">
+                                                            Анализ
+                                                            <div class="ripple-container"></div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#messages" data-toggle="tab">
+                                                            Трейды
+                                                            <div class="ripple-container"></div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#settings" data-toggle="tab">
+                                                            Итоги
+                                                            <div class="ripple-container"></div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="profile">
+                                                <label class="control-label"> You can write your text here...</label>
+                                                <textarea class="form-control" rows="20"></textarea>
+                                            </div>
+                                            <div class="tab-pane" id="messages">
+                                                <label class="control-label"> You can write your text here...</label>
+                                                <textarea class="form-control" rows="20"></textarea>
+                                            </div>
+                                            <div class="tab-pane" id="settings">
+                                                <label class="control-label"> You can write your text here...</label>
+                                                <textarea class="form-control" rows="20"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!--It's menu diary -->
+                     <div class="card">
+                          <h4 class="card-title text-center mb-1">Categories Diary</h4>
+                         <hr>
+                         <div class="card-body">
+                         <li>EURUSD</li>
+                         <li>GBPUSD</li>
+                         <li></li>
+                         <li></li>
+                             </div>
+
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
