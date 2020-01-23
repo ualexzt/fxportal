@@ -16,7 +16,6 @@
             </div>
         </div>
         <div class="row">
-
             <div class="col-md-6">
                 <div class="card card-raised card-background"
                      style="background-image: url('../assets/img/examples/office2.jpg')">
@@ -35,7 +34,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-6">
                 <div class="card card-raised card-background"
                      style="background-image: url('../assets/img/examples/blog8.jpg')">
@@ -52,7 +50,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="row">
             <div class="blogs-3">
@@ -72,7 +69,7 @@
                                             <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
                                         </h3>
                                         <p class="card-description">
-                                            {{ post.content|truncatewords:50 }}
+                                            {{ post.content|safe|truncatewords:50 }}
                                             <a
                                                     href="{{ post.get_absolute_url }}"> Read More </a>
                                         </p>
@@ -91,17 +88,24 @@
 
         </div>
         <div class="row text-center">
-            <ul class="pagination pagination-info">
-                <li><a href="javascript:void(0);">1</a></li>
-                <li><a href="javascript:void(0);">...</a></li>
-                <li><a href="javascript:void(0);">5</a></li>
-                <li><a href="javascript:void(0);">6</a></li>
-                <li class="active"><a href="javascript:void(0);">7</a></li>
-                <li><a href="javascript:void(0);">8</a></li>
-                <li><a href="javascript:void(0);">9</a></li>
-                <li><a href="javascript:void(0);">...</a></li>
-                <li><a href="javascript:void(0);">12</a></li>
-            </ul>
+            {% if is_paginated %}
+                <ul class="pagination pagination-info">
+                    {% if page_obj.has_previous %}
+                        <li><a href="?page={{ page_obj.previous_page_number }}"> prev</a></li>
+                    {% endif %}
+
+                    {% for num in page_obj.paginator.page_range %}
+                        {% if page_obj.number == num %}
+                            <li class="active"><a href="?page={{ num }}">{{ num }}</a></li>
+                        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                            <li><a href="?page={{ num }}">{{ num }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                        <li><a href="?page={{ page_obj.next_page_number }}"> next</a></li>
+                    {% endif %}
+                </ul>
+            {% endif %}
         </div>
     </div>
 

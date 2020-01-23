@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'main.apps.MainConfig',
     'blog.apps.BlogConfig',
     'profiles.apps.ProfilesConfig',
+    'diary.apps.DiaryConfig',
     'crispy_forms',
     'ckeditor',
     'ckeditor_uploader',

@@ -1,0 +1,72 @@
+{% extends 'base_profile.html' %}
+{% block content %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h4 class="card-title mt-0"> Текущие дневники</h4>
+                                    <p class="card-category"> Here is a subtitle for this table</p>
+                                </div>
+                                <div class="col-4 text-right"><a href="{% url 'diare_cat_create' %}" type="button"
+                                                                 rel="tooltip" class="btn btn-default">
+                                    <i class="material-icons">add</i>
+                                </a></div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class="text-primary">
+                                    <th>
+                                        Название
+                                    </th>
+                                    <th>
+                                        Автор
+                                    </th>
+                                    <th>
+                                        Дата обновления
+                                    </th>
+                                    <th>
+                                        Действия
+                                    </th>
+                                    </thead>
+                                    <tbody>
+                                    {% for categoty in diarycategory_list %}
+                                        <tr>
+                                            <td>
+                                                <a href="{% url 'diary_cat_detail' pk=categoty.id %}"> {{ categoty.diary_name }} </a>
+                                            </td>
+                                            <td>
+                                                {{ categoty.author }}
+                                            </td>
+                                            <td>
+                                                {{ categoty.update_date }}
+                                            </td>
+                                            <td class="td-actions text-center">
+                                                <a href="{% url 'diare_cat_update' pk=categoty.id %}" type="button"
+                                                   rel="tooltip" class="btn btn-success">
+                                                    <i class="material-icons">edit</i>
+                                                </a>
+                                                <a href="{% url 'diare_cat_delete' pk=categoty.id %}" type="button"
+                                                   rel="tooltip" class="btn btn-danger">
+                                                    <i class="material-icons">close</i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

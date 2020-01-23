@@ -1,0 +1,45 @@
+{% extends 'base_profile.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h4 class="card-title">Дневник трейдера</h4>
+                            <p class="card-category"> Добавьте свои мысли о торговле </p>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <h5> Заметки </h5>
+                                    <hr>
+                                    <ul>
+                                        {% for note in diarynote_list %}
+                                            <li><a href="{{ note.get_absolute_url }}"> {{ note.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <div class="col-9">
+                                    <form method="post" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div class="form-group label-floating">
+                                            {{ form.media }}
+                                            {{ form|crispy }}
+                                        </div>
+                                        <button type="submit" class="btn btn-success btn-sm pull-center">Запостить
+                                        </button>
+                                        <div class="clearfix"></div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

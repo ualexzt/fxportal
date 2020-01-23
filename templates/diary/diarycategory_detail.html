@@ -1,0 +1,36 @@
+{% extends 'base_profile.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h4 class="card-title">Дневник трейдера</h4>
+                            <p class="card-category"> Добавьте свои мысли о торговле </p>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <h5> Заметки </h5>
+                                    <hr>
+                                    <ul>
+                                        {% for note in  notes %}
+                                            <li><a href="{% url 'diary_note_update' pk=note.id %}"> {{ note.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                <div class="col-9">
+                                    <textarea class="form-control" rows="20">  Записи дневника </textarea>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
