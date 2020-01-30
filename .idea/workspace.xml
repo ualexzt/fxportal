@@ -2,34 +2,266 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/diary/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diary/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diary/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diary/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diary/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diary/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diary/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diary/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/img/bg_blog.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/diary/diarycategory_confirm_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/diary/diarycategory_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/diary/diarycategory_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/diary/diarycategory_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/diary/diarynote_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/diary/diarynote_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/diary/diarysubcategory_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/diary/diarysubcatigory_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fxportal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fxportal.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fxportal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fxportal/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fxportal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fxportal/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/admin/fonts/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/admin/fonts/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/CHANGES.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/CHANGES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/contents.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/contents.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/CHANGES.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/CHANGES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/README.ru.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/README.ru.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/arta.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/arta.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/ascetic.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/ascetic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-dune.dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-dune.dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-dune.light.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-dune.light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-forest.dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-forest.dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-forest.light.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-forest.light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-heath.dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-heath.dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-heath.light.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-heath.light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-lakeside.dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-lakeside.dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-lakeside.light.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-lakeside.light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-seaside.dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-seaside.dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-seaside.light.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-seaside.light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/brown_paper.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/brown_paper.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/docco.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/docco.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/far.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/far.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/foundation.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/foundation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/github.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/github.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/googlecode.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/googlecode.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/idea.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/idea.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/ir_black.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/ir_black.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/magula.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/magula.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/mono-blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/mono-blue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/obsidian.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/obsidian.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/paraiso.dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/paraiso.dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/paraiso.light.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/paraiso.light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/pojoaque.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/pojoaque.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/railscasts.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/railscasts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/rainbow.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/rainbow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/school_book.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/school_book.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/solarized_dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/solarized_dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/solarized_light.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/solarized_light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/sunburst.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/sunburst.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-blue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-bright.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-bright.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-eighties.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-eighties.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/vs.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/vs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/xcode.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/xcode.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/zenburn.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/zenburn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/colordialog/dialogs/colordialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/colordialog/dialogs/colordialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/copyformatting/styles/copyformatting.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/copyformatting/styles/copyformatting.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/devtools/lang/_translationstatus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/devtools/lang/_translationstatus.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/dialog/styles/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/dialog/styles/dialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/preview/preview.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/preview/preview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/scayt/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/scayt/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/scayt/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/scayt/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/scayt/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/scayt/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/scayt/dialogs/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/scayt/dialogs/dialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/scayt/dialogs/toolbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/scayt/dialogs/toolbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/tableselection/styles/tableselection.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/tableselection/styles/tableselection.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/templates/dialogs/templates.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/templates/dialogs/templates.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/uicolor/lang/_translationstatus.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/uicolor/lang/_translationstatus.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/uicolor/yui/assets/yui.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/uicolor/yui/assets/yui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/wsc/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/wsc/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/wsc/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/wsc/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/wsc/dialogs/ciframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/wsc/dialogs/ciframe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/wsc/dialogs/wsc.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/wsc/dialogs/wsc.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/dialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/dialog_ie.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/dialog_ie.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/dialog_ie8.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/dialog_ie8.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/dialog_iequirks.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/dialog_iequirks.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/editor.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/editor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/editor_gecko.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/editor_gecko.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/editor_ie.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/editor_ie.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/editor_ie8.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/editor_ie8.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/editor_iequirks.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/editor_iequirks.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono-lisa/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/dialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/dialog_ie.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/dialog_ie.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/dialog_ie7.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/dialog_ie7.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/dialog_ie8.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/dialog_ie8.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/dialog_iequirks.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/dialog_iequirks.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/editor.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/editor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/editor_gecko.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/editor_gecko.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/editor_ie.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/editor_ie.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/editor_ie7.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/editor_ie7.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/editor_ie8.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/editor_ie8.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/editor_iequirks.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/editor_iequirks.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/skins/moono/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/basic.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/basic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/black.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/black.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/galleriffic-1.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/galleriffic-1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/galleriffic-2.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/galleriffic-2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/galleriffic-3.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/galleriffic-3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/galleriffic-4.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/galleriffic-4.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/galleriffic-5.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/galleriffic-5.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/white.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/galleriffic/css/white.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/galleriffic/js/jquery.galleriffic.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/galleriffic/js/jquery.galleriffic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/galleriffic/js/jquery.opacityrollover.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/galleriffic/js/jquery.opacityrollover.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/css/material-dashboard-rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/css/material-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/profiles/assets/css/material-dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/css/material-dashboard.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/css/material-dashboard.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/angular.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/bg0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/bg10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/bg11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/bg12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/bg2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/bg3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/bg5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/bg6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/bg7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/bg8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/bg9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/city.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/dg1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/dg10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/dg2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/dg3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/dg6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/dg9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/ex1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/ex2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/ex3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/blog1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/blog2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/blog3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/blog4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/blog5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/blog6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/blog7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/blog8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-blog1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-blog2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-blog3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-blog4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-blog5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-blog6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-blog8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-product1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-product2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-product3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-product4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-profile1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-profile2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-profile4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-profile5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-profile6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-profile7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-project1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-project2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-project3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-project4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-project5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/card-project6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/chris0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/chris1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/chris3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/chris4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/chris5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/chris6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/chris7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/chris8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/chris9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/city.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/color1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/color2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/color3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/dolce.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/ecommerce-header.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/ecommerce-tips2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/gucci.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/office1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/office2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/office3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/office4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/office5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/product1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/product2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/product3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/product4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/suit-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/suit-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/suit-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/suit-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/suit-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/suit-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/examples/tom-ford.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/faces/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/faces/camp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/faces/card-profile1-square.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/faces/card-profile2-square.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/faces/card-profile4-square.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/faces/card-profile5-square.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/faces/card-profile6-square.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/faces/christian.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/faces/kendall.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/faces/marc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/html.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/landing.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/new_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/notification.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/office2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/presentation/components.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/presentation/components2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/product1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/product2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/product3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/react.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/sections/iphone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/sections/iphone2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/sidebar-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/sidebar-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/sidebar-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/table.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/img/vue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/js/plugins/bootstrap-datetimepicker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/profiles/assets/js/plugins/bootstrap-datetimepicker.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/category_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/category_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/post_confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_confirm_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/diary/diarycategory_confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/diarycategory_confirm_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/diary/diarycategory_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/diarycategory_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/diary/diarycategory_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/diarycategory_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/diary/diarycategory_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/diarycategory_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/diary/diarynote_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/diarynote_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/include/nav_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/include/nav_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profiles/trader_diary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profiles/profile_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profiles/profile_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/Activate.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/Activate.ps1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/Django-3.0.2.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/Django-3.0.2.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/Pillow-7.0.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/Pillow-7.0.0.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/asgiref-3.2.3.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/asgiref-3.2.3.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/django/contrib/admin/static/admin/fonts/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/django/contrib/admin/static/admin/fonts/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/pytz-2019.3.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/pytz-2019.3.dist-info/RECORD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/sqlparse-0.3.0.dist-info/RECORD" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.8/site-packages/sqlparse-0.3.0.dist-info/RECORD" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +304,11 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="fxportal/invalid/Django" />
+    </ignored-facets>
+  </component>
   <component name="ProjectId" id="1VvTNqkpbP9vEUp48tdm2X1ImgD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -96,17 +333,18 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/media" />
+      <recent name="$PROJECT_DIR$/templates/diary" />
+      <recent name="$PROJECT_DIR$/static" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/css" />
       <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/media/post_img" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/diary" />
-      <recent name="$PROJECT_DIR$/static" />
     </key>
   </component>
   <component name="RunManager">
@@ -134,18 +372,6 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -196,7 +422,19 @@
       <workItem from="1579701357878" duration="422000" />
       <workItem from="1579701822772" duration="4855000" />
       <workItem from="1579761947799" duration="15267000" />
-      <workItem from="1579802383633" duration="4647000" />
+      <workItem from="1579802383633" duration="4904000" />
+      <workItem from="1579891635196" duration="2072000" />
+      <workItem from="1579942196413" duration="20774000" />
+      <workItem from="1580138866313" duration="8998000" />
+      <workItem from="1580226169256" duration="10442000" />
+      <workItem from="1580301073890" duration="318000" />
+      <workItem from="1580301437741" duration="115000" />
+      <workItem from="1580301649007" duration="2505000" />
+      <workItem from="1580379611359" duration="681000" />
+      <workItem from="1580381697791" duration="68000" />
+      <workItem from="1580382290662" duration="192000" />
+      <workItem from="1580385972240" duration="804000" />
+      <workItem from="1580386841647" duration="119000" />
     </task>
     <task id="LOCAL-00001" summary="add blog app and create models, migrations">
       <created>1578146858594</created>
@@ -387,7 +625,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579435900576</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="add Diary apps">
+      <created>1579811021708</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1579811021708</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,18 +667,27 @@
     <MESSAGE value="fixed function postregister" />
     <MESSAGE value="update template" />
     <MESSAGE value="add Email and Password Reset" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Email and Password Reset" />
+    <MESSAGE value="add Diary apps" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Diary apps" />
   </component>
   <component name="WindowStateProjectService">
     <state x="283" y="49" key="#Inspections" timestamp="1578499462291">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="283" y="49" key="#Inspections/0.0.1366.768@0.0.1366.768" timestamp="1578499462291" />
+    <state x="283" y="49" key="#Notifications" timestamp="1580386895737">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="283" y="49" key="#Notifications/0.0.1366.768@0.0.1366.768" timestamp="1580386895737" />
     <state x="283" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579775317275">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state x="283" y="49" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1578142828723" />
     <state x="283" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1366.745@0.23.1366.745" timestamp="1579775317275" />
+    <state x="421" y="149" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580232167861">
+      <screen x="0" y="23" width="1366" height="745" />
+    </state>
+    <state x="421" y="149" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1366.745@0.23.1366.745" timestamp="1580232167861" />
     <state x="219" y="230" width="927" height="331" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog" timestamp="1579027976052">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
@@ -442,11 +696,11 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="435" y="247" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1578590068309" />
-    <state x="294" y="23" key="CommitChangelistDialog2" timestamp="1579435899683">
+    <state x="294" y="23" key="CommitChangelistDialog2" timestamp="1579811020946">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state x="294" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1578592370132" />
-    <state x="294" y="23" key="CommitChangelistDialog2/0.23.1366.745@0.23.1366.745" timestamp="1579435899683" />
+    <state x="294" y="23" key="CommitChangelistDialog2/0.23.1366.745@0.23.1366.745" timestamp="1579811020946" />
     <state x="484" y="262" width="475" height="199" key="Github.ShareDialog" timestamp="1578133046855">
       <screen x="0" y="23" width="1366" height="675" />
     </state>
@@ -455,26 +709,26 @@
       <screen x="0" y="23" width="1366" height="675" />
     </state>
     <state x="436" y="69" key="Github.UntrackedFilesDialog/0.23.1366.675@0.23.1366.675" timestamp="1578133079013" />
-    <state width="1324" height="232" key="GridCell.Tab.0.bottom" timestamp="1579780812818">
+    <state width="1324" height="187" key="GridCell.Tab.0.bottom" timestamp="1580304717560">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state width="1324" height="202" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1578600622267" />
-    <state width="1324" height="232" key="GridCell.Tab.0.bottom/0.23.1366.745@0.23.1366.745" timestamp="1579780812818" />
-    <state width="1324" height="232" key="GridCell.Tab.0.center" timestamp="1579780812817">
+    <state width="1324" height="187" key="GridCell.Tab.0.bottom/0.23.1366.745@0.23.1366.745" timestamp="1580304717560" />
+    <state width="1324" height="187" key="GridCell.Tab.0.center" timestamp="1580304717559">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state width="1324" height="202" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1578600622265" />
-    <state width="1324" height="232" key="GridCell.Tab.0.center/0.23.1366.745@0.23.1366.745" timestamp="1579780812817" />
-    <state width="1324" height="232" key="GridCell.Tab.0.left" timestamp="1579780812816">
+    <state width="1324" height="187" key="GridCell.Tab.0.center/0.23.1366.745@0.23.1366.745" timestamp="1580304717559" />
+    <state width="1324" height="187" key="GridCell.Tab.0.left" timestamp="1580304717558">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state width="1324" height="202" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1578600622265" />
-    <state width="1324" height="232" key="GridCell.Tab.0.left/0.23.1366.745@0.23.1366.745" timestamp="1579780812816" />
-    <state width="1324" height="232" key="GridCell.Tab.0.right" timestamp="1579780812818">
+    <state width="1324" height="187" key="GridCell.Tab.0.left/0.23.1366.745@0.23.1366.745" timestamp="1580304717558" />
+    <state width="1324" height="187" key="GridCell.Tab.0.right" timestamp="1580304717559">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state width="1324" height="202" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1578600622266" />
-    <state width="1324" height="232" key="GridCell.Tab.0.right/0.23.1366.745@0.23.1366.745" timestamp="1579780812818" />
+    <state width="1324" height="187" key="GridCell.Tab.0.right/0.23.1366.745@0.23.1366.745" timestamp="1580304717559" />
     <state width="1324" height="232" key="GridCell.Tab.1.bottom" timestamp="1579780812821">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
@@ -495,16 +749,20 @@
     </state>
     <state width="1324" height="250" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1578135139632" />
     <state width="1324" height="232" key="GridCell.Tab.1.right/0.23.1366.745@0.23.1366.745" timestamp="1579780812821" />
-    <state x="232" y="45" key="SettingsEditor" timestamp="1579170020275">
-      <screen x="0" y="23" width="1366" height="745" />
+    <state x="232" y="23" key="SettingsEditor" timestamp="1580386959864">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="232" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1578591999039" />
+    <state x="232" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1580386959864" />
     <state x="192" y="23" key="SettingsEditor/0.23.1366.675@0.23.1366.675" timestamp="1578132822236" />
     <state x="232" y="45" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1579170020275" />
-    <state x="283" y="143" key="Vcs.Push.Dialog.v2" timestamp="1579435905293">
+    <state x="283" y="143" key="Vcs.Push.Dialog.v2" timestamp="1579811026598">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
     <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1578592373859" />
-    <state x="283" y="143" key="Vcs.Push.Dialog.v2/0.23.1366.745@0.23.1366.745" timestamp="1579435905293" />
+    <state x="283" y="143" key="Vcs.Push.Dialog.v2/0.23.1366.745@0.23.1366.745" timestamp="1579811026598" />
+    <state x="362" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1580379627726">
+      <screen x="0" y="23" width="1366" height="677" />
+    </state>
+    <state x="362" y="194" key="com.intellij.ide.util.TipDialog/0.23.1366.677@0.23.1366.677" timestamp="1580379627726" />
   </component>
 </project>

@@ -80,42 +80,21 @@
                 <div class="col-md-12">
                     <div class="card h-100">
                         <div class="card-header card-header-primary">
-                            <div class="row">
-                                <div class="col-8">
-                                    <h4 class="card-title">Категории дневника - {{ object.name }}</h4>
-                                    <p class="card-category"> Добавьте свои мысли о торговле </p>
-                                </div>
-                                <div class="col-4 text-right"><a
-                                        href="{% url 'diary_subcat_create' %}"
-                                        type="button"
-                                        rel="tooltip" class="btn btn-default">
-                                    <i class="material-icons">add</i>
-                                </a>
-                                </div>
-                            </div>
+                            <h4 class="card-title">Категория - {{ object.name }} - дневника - "{{ object.parent.name }}"</h4>
+                            <p class="card-category"> Добавьте свои мысли о торговле </p>
                         </div>
-
                         <div class="card-body">
                             <div class="row sticky">
-                                {% for subcategory in subcategories %}
-                                    <div class="col-md-4">
-                                        <div class="card card-chart">
-                                            <div class="card-header card-header-warning">
-                                                <div class="ct-chart" id="completedTasksChart"></div>
-                                            </div>
-                                            <div class="card-body">
-                                                <a href="{{ subcategory.get_absolute_url }}">
-                                                    <h4 class="card-title">{{ subcategory.name }}</h4>
-                                                    <p class="card-category"></p></a>
-                                            </div>
-                                            <div class="card-footer">
-                                                <div class="stats">
-                                                    <i class="material-icons">access_time</i> {{ subcategory.update_date|date:'b, d, Y' }}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                {% endfor %}
+                                <ul>
+                                    {% for note in notes %}
+                                        <li>
+                                            <a href="#">
+                                                <h2>{{ note.title }}</h2>
+                                                <small>Обновлено: {{ note.update_date|date:'b, d, Y'  }}</small>
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
                             </div>
                         </div>
                     </div>
