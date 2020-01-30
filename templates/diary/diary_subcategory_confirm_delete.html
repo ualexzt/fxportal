@@ -13,7 +13,8 @@
                                     <h5 class="category-social text-danger">
                                         <i class="fa fa-newspaper-o"></i> Удалить дневник - {{ object.name }}
                                     </h5>
-                                    <small class="text-danger"> При удалении дневника Вы потеряеете все записи сделанные в нем!!!</small>
+                                    <small class="text-danger"> При удалении дневника Вы потеряеете все записи сделанные
+                                        в нем!!!</small>
                                     <br>
                                     <br>
                                     <br>
@@ -21,7 +22,8 @@
                                         {% csrf_token %}
                                         <button type="submit" class="btn btn-danger btn-sm pull-center">Удалить
                                         </button>
-                                         <a class="btn btn-primary btn-sm pull-right" href="{% url 'diary_cat_list' %}">Отменить</a>
+                                        <a class="btn btn-primary btn-sm pull-right"
+                                           href="{% url 'diary_cat_detail' cat_pk=object.patent.id %}">Отменить</a>
                                         <div class="clearfix"></div>
                                     </form>
                                 </div>

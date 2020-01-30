@@ -86,7 +86,7 @@
                                     <p class="card-category"> Добавьте свои мысли о торговле </p>
                                 </div>
                                 <div class="col-4 text-right"><a
-                                        href="{% url 'diary_subcat_create' %}"
+                                        href="{% url 'diary_subcat_create' cat_pk=object.id %}"
                                         type="button"
                                         rel="tooltip" class="btn btn-default">
                                     <i class="material-icons">add</i>
@@ -111,6 +111,16 @@
                                             <div class="card-footer">
                                                 <div class="stats">
                                                     <i class="material-icons">access_time</i> {{ subcategory.update_date|date:'b, d, Y' }}
+                                                </div>
+                                                <div class="text-right">
+                                                    <a type="button" rel="tooltip" title="Edit Task"
+                                                       class="btn btn-primary btn-link btn-sm">
+                                                        <i class="material-icons">edit</i>
+                                                    </a>
+                                                    <a type="button" rel="tooltip" title="Remove"
+                                                       class="btn btn-danger btn-link btn-sm">
+                                                        <i class="material-icons">close</i>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>

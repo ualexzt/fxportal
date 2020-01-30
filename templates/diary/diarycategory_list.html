@@ -12,7 +12,7 @@
                                     <h4 class="card-title mt-0"> Текущие дневники</h4>
                                     <p class="card-category"> Here is a subtitle for this table</p>
                                 </div>
-                                <div class="col-4 text-right"><a href="{% url 'diare_cat_create' %}" type="button"
+                                <div class="col-4 text-right"><a href="{% url 'diary_cat_create' %}" type="button"
                                                                  rel="tooltip" class="btn btn-default">
                                     <i class="material-icons">add</i>
                                 </a></div>
@@ -37,11 +37,11 @@
                                                 <small>Обновлен: {{ categoty.update_date }}</small>
                                             </div>
                                             <div class="text-center">
-                                                <a href="{% url 'diare_cat_update' cat_pk=categoty.id %}" type="button"
+                                                <a href="{% url 'diary_cat_update' cat_pk=categoty.id %}" type="button"
                                                    rel="tooltip" class="btn btn-round btn-sm btn-success">
                                                     <i class="material-icons">edit</i>
                                                 </a>
-                                                <a href="{% url 'diare_cat_delete' cat_pk=categoty.id %}" type="button"
+                                                <a href="{% url 'diary_cat_delete' cat_pk=categoty.id %}" type="button"
                                                    rel="tooltip" class="btn btn-round btn-sm btn-danger">
                                                     <i class="material-icons">close</i>
                                                 </a>

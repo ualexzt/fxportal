@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="" />
+    <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/diary/diary_subcategory_confirm_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/fxportal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fxportal.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/diary_img/Dax30_prFvy21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/diary_img/Dax30_prFvy21.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/diary_img/diary.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/diary_img/diary.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/profiles/assets/css/material-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/profiles/assets/css/material-dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/diary/diarycategory_confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/diarycategory_confirm_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/diary/diarycategory_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/diarycategory_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/diary/diarycategory_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/diarycategory_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/include/nav_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/include/nav_base.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +38,27 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SQLite - db.sqlite3" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SQLite - db.sqlite3" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SQLite - db.sqlite3" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
@@ -72,7 +112,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -172,6 +212,7 @@
       <workItem from="1580397181015" duration="510000" />
       <workItem from="1580397786180" duration="482000" />
       <workItem from="1580398346742" duration="810000" />
+      <workItem from="1580411344858" duration="3879000" />
     </task>
     <task id="LOCAL-00001" summary="add blog app and create models, migrations">
       <created>1578146858594</created>
@@ -420,10 +461,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="283" y="49" key="#Inspections/0.0.1366.768@0.0.1366.768" timestamp="1578499462291" />
-    <state x="283" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579775317275">
-      <screen x="0" y="23" width="1366" height="745" />
+    <state x="283" y="49" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580415748956">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="283" y="49" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1578142828723" />
+    <state x="283" y="49" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1580415748956" />
     <state x="283" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1366.745@0.23.1366.745" timestamp="1579775317275" />
     <state x="421" y="149" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580232167861">
       <screen x="0" y="23" width="1366" height="745" />
@@ -490,14 +531,18 @@
     </state>
     <state width="1324" height="250" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1578135139632" />
     <state width="1324" height="232" key="GridCell.Tab.1.right/0.23.1366.745@0.23.1366.745" timestamp="1579780812821" />
+    <state width="219" height="457" key="HiddenNamespacesPopup" timestamp="1580415704437">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="219" height="457" key="HiddenNamespacesPopup/0.0.1366.768@0.0.1366.768" timestamp="1580415704437" />
     <state x="399" y="107" key="MultipleFileMergeDialog" timestamp="1580400005560">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="399" y="107" key="MultipleFileMergeDialog/0.0.1366.768@0.0.1366.768" timestamp="1580400005560" />
-    <state x="232" y="23" key="SettingsEditor" timestamp="1580400048272">
+    <state x="232" y="23" key="SettingsEditor" timestamp="1580411508649">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="232" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1580400048272" />
+    <state x="232" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1580411508649" />
     <state x="192" y="23" key="SettingsEditor/0.23.1366.675@0.23.1366.675" timestamp="1578132822236" />
     <state x="232" y="45" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1579170020275" />
     <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1580399936319">
@@ -505,6 +550,10 @@
     </state>
     <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1580399936319" />
     <state x="283" y="143" key="Vcs.Push.Dialog.v2/0.23.1366.745@0.23.1366.745" timestamp="1579811026598" />
+    <state x="471" y="214" width="423" height="335" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1580415811561">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="471" y="214" width="423" height="335" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1366.768@0.0.1366.768" timestamp="1580415811561" />
     <state x="362" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1580397199245">
       <screen x="0" y="23" width="1366" height="677" />
     </state>

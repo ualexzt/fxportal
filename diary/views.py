@@ -1,7 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
-from .models import DiaryCategory, DiaryNote, DiarySubCatigory
+from .models import DiaryCategory, DiaryNote, DiarySubCategory
 
 
 class DiaryCategoryView(LoginRequiredMixin, ListView):
@@ -19,7 +19,7 @@ class DiaryCategoryDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['subcategories'] = DiarySubCatigory.objects.filter(parent=self.object)
+        context['subcategories'] = DiarySubCategory.objects.filter(parent=self.object)
         return context
 
 
@@ -38,6 +38,7 @@ class DiaryCategoryCreateView(CreateView):
 class DiaryCategoryUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = DiaryCategory
     fields = ['name', 'cat_img']
+    pk_url_kwarg = 'cat_pk'
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -55,6 +56,7 @@ class DiaryCategoryUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateVie
 
 class DiaryCategoryDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = DiaryCategory
+    pk_url_kwarg = 'cat_pk'
 
     def get_success_url(self):
         return reverse('diary_cat_list')
@@ -67,7 +69,7 @@ class DiaryCategoryDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteVie
 
 
 class DiarySubCategoryDetailView(DetailView):
-    model = DiarySubCatigory
+    model = DiarySubCategory
     template_name = 'diary/diarysubcategory_detail.html'
     pk_url_kwarg = 'sub_pk'
 
@@ -78,13 +80,46 @@ class DiarySubCategoryDetailView(DetailView):
 
 
 class DiarySubCategoryCreateView(CreateView):
-    model = DiarySubCatigory
+    model = DiarySubCategory
     fields = ['name']
-    success_url = 'diary_cat_detail'
 
     def form_valid(self, form):
-        form.instance = self.get_object().parent.name
+        form.instance.parent = DiaryCategory.objects.get(pk=self.kwargs['cat_pk'])
         return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('diary_cat_detail', kwargs={'cat_pk': self.kwargs['cat_pk']})
+
+
+class DiarySubCategoryUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = DiarySubCategory
+    fields = ['name']
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('diary_cat_list')
+
+    def test_func(self):
+        category = self.get_object()
+        if self.request.user == category.author:
+            return True
+        return False
+
+
+class DiarySubCategoryDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = DiarySubCategory
+
+    def get_success_url(self):
+        return reverse('diary_cat_list')
+
+    def test_func(self):
+        category = self.get_object()
+        if self.request.user == category.author:
+            return True
+        return False
 
 
 class DiaryNoteDetailView(LoginRequiredMixin, DetailView):

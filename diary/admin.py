@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import DiaryCategory, DiaryNote, DiarySubCatigory
+from .models import DiaryCategory, DiaryNote, DiarySubCategory
 
 admin.site.register(DiaryCategory)
-admin.site.register(DiarySubCatigory)
+admin.site.register(DiarySubCategory)
 admin.site.register(DiaryNote)

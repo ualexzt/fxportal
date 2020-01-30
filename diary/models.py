@@ -30,7 +30,7 @@ class DiaryCategory(models.Model):
         img.save(self.cat_img.path)
 
 
-class DiarySubCatigory(models.Model):
+class DiarySubCategory(models.Model):
     parent = models.ForeignKey(DiaryCategory, blank=True, on_delete=models.CASCADE,
                                verbose_name='Дневник')
     name = models.CharField(max_length=100, verbose_name='Название категории')
@@ -44,11 +44,11 @@ class DiarySubCatigory(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('diary_subcat_detail', kwargs={'main_pk': self.parent.pk, 'sub_pk': self.pk})
+        return reverse('diary_subcat_detail', kwargs={'cat_pk': self.parent.pk, 'sub_pk': self.pk})
 
 
 class DiaryNote(models.Model):
-    category = models.ForeignKey(DiarySubCatigory, on_delete=models.CASCADE, verbose_name='Категория дневника')
+    category = models.ForeignKey(DiarySubCategory, on_delete=models.CASCADE, verbose_name='Категория дневника')
     title = models.CharField(max_length=150, db_index=True, default='Новая заметка', verbose_name='Заметка')
     content = RichTextUploadingField(blank=True, verbose_name='Текст заметки')
     create_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
