@@ -1,0 +1,17 @@
+CMEPageTrURL: /trading/energy/crude-oil/brent-crude-oil_performance_bonds.html#sortField=exchange&sortAsc=true&clearingCode=BB&sector=CRUDE+OIL&exchange=NYM&pageNumber=1
+MinimumPrice: 10.00
+03.10.2017  2300
+08.01.2018  2225
+26.03.2018  2250
+19.04.2018  2350
+24.04.2018  2400
+14.05.2018  2525
+31.05.2018  2625
+21.06.2018  2775
+27.06.2018  2850
+09.07.2018  2975
+16.07.2018  3500
+19.07.2018  3900
+29.08.2018  3500
+19.11.2018  4000
+03.12.2018  4625

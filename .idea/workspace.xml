@@ -2,6 +2,80 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/media/cmedata/#BTC.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/#Bitcoin.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/#CL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/#WTI.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/AUDCAD.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/AUDJPY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/AUDNZD.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/AUDUSD.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/BP6H19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/BP6M19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/BRENT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/BRN.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/BTC.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/BTCUSD.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/Bitcoin.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/CA6H19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/CA6M19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/CADJPY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/CHFJPY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/CL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/DA6H19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/DA6M19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/EU6H19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/EU6M19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/EURAUD.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/EURCAD.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/EURCHF.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/EURGBP.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/EURJPY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/EURNOK.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/EURSEK.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/EURUSD.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/GBPCHF.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/GBPJPY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/GBPUSD.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/GCEJ19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/GOLD.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/JY6H19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/JY6M19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/NE6H19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/NG.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/NZDUSD.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/SF6H19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/SILVER.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/TYAM19.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/UKBrent.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/UKOILb.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/USCrude.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/USDCAD.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/USDCHF.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/USDCNH.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/USDJPY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/USDMXN.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/USDNOK.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/USDRUB.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/USDRUR.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/USDSEK.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/USDZAR.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/USOIL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/WT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/WTI.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/XAGUSD.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/XAUUSD.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/XAUUSDINT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/cmedata/XBRUSD.c.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/diary_img/Dax30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/diary_img/Dax30_prFvy21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/diary_img/dg1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/diary_img/diary.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/diary_img/sp500.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/diary_img/sp500_PVU0S52.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/diary_img/usdcad.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/diary_img/usdcad_7aIJcXl.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/post_img/bg10.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/templates/diary/diarysubcategory_detail.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/templates/diary/diarysubcatigory_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/fxportal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fxportal.iml" afterDir="false" />
@@ -333,7 +407,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -430,11 +504,9 @@
       <workItem from="1580301073890" duration="318000" />
       <workItem from="1580301437741" duration="115000" />
       <workItem from="1580301649007" duration="2505000" />
-      <workItem from="1580379611359" duration="681000" />
-      <workItem from="1580381697791" duration="68000" />
-      <workItem from="1580382290662" duration="192000" />
-      <workItem from="1580385972240" duration="804000" />
-      <workItem from="1580386841647" duration="119000" />
+      <workItem from="1580397181015" duration="510000" />
+      <workItem from="1580397786180" duration="482000" />
+      <workItem from="1580398346742" duration="638000" />
     </task>
     <task id="LOCAL-00001" summary="add blog app and create models, migrations">
       <created>1578146858594</created>
@@ -675,10 +747,6 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="283" y="49" key="#Inspections/0.0.1366.768@0.0.1366.768" timestamp="1578499462291" />
-    <state x="283" y="49" key="#Notifications" timestamp="1580386895737">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="283" y="49" key="#Notifications/0.0.1366.768@0.0.1366.768" timestamp="1580386895737" />
     <state x="283" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579775317275">
       <screen x="0" y="23" width="1366" height="745" />
     </state>
@@ -749,10 +817,10 @@
     </state>
     <state width="1324" height="250" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1578135139632" />
     <state width="1324" height="232" key="GridCell.Tab.1.right/0.23.1366.745@0.23.1366.745" timestamp="1579780812821" />
-    <state x="232" y="23" key="SettingsEditor" timestamp="1580386959864">
+    <state x="232" y="23" key="SettingsEditor" timestamp="1580399629238">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="232" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1580386959864" />
+    <state x="232" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1580399629238" />
     <state x="192" y="23" key="SettingsEditor/0.23.1366.675@0.23.1366.675" timestamp="1578132822236" />
     <state x="232" y="45" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1579170020275" />
     <state x="283" y="143" key="Vcs.Push.Dialog.v2" timestamp="1579811026598">
@@ -760,9 +828,9 @@
     </state>
     <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1578592373859" />
     <state x="283" y="143" key="Vcs.Push.Dialog.v2/0.23.1366.745@0.23.1366.745" timestamp="1579811026598" />
-    <state x="362" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1580379627726">
+    <state x="362" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1580397199245">
       <screen x="0" y="23" width="1366" height="677" />
     </state>
-    <state x="362" y="194" key="com.intellij.ide.util.TipDialog/0.23.1366.677@0.23.1366.677" timestamp="1580379627726" />
+    <state x="362" y="194" key="com.intellij.ide.util.TipDialog/0.23.1366.677@0.23.1366.677" timestamp="1580397199245" />
   </component>
 </project>

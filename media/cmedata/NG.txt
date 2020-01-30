@@ -1,0 +1,3 @@
+CMEPageTrURL: /trading/energy/natural-gas/natural-gas_performance_bonds.html#sortField=exchange&sortAsc=true&clearingCode=NG&sector=NATURAL+GAS&exchange=NYM&pageNumber=1 
+MinimumPrice: 100.00
+02.01.2008  1850

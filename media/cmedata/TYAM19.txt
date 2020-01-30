@@ -1,0 +1,4 @@
+CMEPageTrURL: /trading/interest-rates/us-treasury/10-year-us-treasury-note_performance_bonds.html#sortField=exchange&sortAsc=true&exchange=CBT&sector=INTEREST+RATES&clearingCode=21&pageNumber=1
+MinimumPrice: 15.625
+29.01.2008  1150
+
