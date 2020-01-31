@@ -94,30 +94,32 @@ class DiarySubCategoryCreateView(CreateView):
 class DiarySubCategoryUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = DiarySubCategory
     fields = ['name']
+    pk_url_kwarg = 'sub_pk'
 
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('diary_cat_list')
+        return reverse('diary_cat_detail', kwargs={'cat_pk': self.kwargs['cat_pk']})
 
     def test_func(self):
         category = self.get_object()
-        if self.request.user == category.author:
+        if self.request.user == category.parent.author:
             return True
         return False
 
 
 class DiarySubCategoryDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = DiarySubCategory
+    pk_url_kwarg = 'sub_pk'
 
     def get_success_url(self):
-        return reverse('diary_cat_list')
+        return reverse('diary_cat_detail', kwargs={'cat_pk': self.kwargs['cat_pk']})
 
     def test_func(self):
         category = self.get_object()
-        if self.request.user == category.author:
+        if self.request.user == category.parent.author:
             return True
         return False
 
@@ -126,41 +128,47 @@ class DiaryNoteDetailView(LoginRequiredMixin, DetailView):
     model = DiaryNote
     template_name = 'diary/diarynote_detail.html'
 
-    def get_object(self, *args, **kwargs):
-        return DiaryNote.objects.get(pk=self.kwargs.get("cat_pk"))
-
 
 class DiaryNoteCreateView(CreateView):
     model = DiaryNote
-    fields = ['title', 'category', 'content']
-    pk_url_kwarg = 'cat_pk'
+    fields = ['title', 'content']
 
     def form_valid(self, form):
-        form.instance.author = self.request.user
+        form.instance.category = DiarySubCategory.objects.get(pk=self.kwargs['sub_pk'])
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('diary_note_detail')
+        return reverse('diary_subcat_detail', kwargs={'cat_pk': self.kwargs['cat_pk'], 'sub_pk': self.kwargs['sub_pk']})
 
 
 class DiaryNoteUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = DiaryNote
     fields = ['title', 'content']
+    pk_url_kwarg = 'note_pk'
 
     def form_valid(self, form):
-        form.instance.author = self.request.user
+        form.instance.category = DiarySubCategory.objects.get(pk=self.kwargs['sub_pk'])
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('diary_note_detail')
-
-    def get_object(self, *args, **kwargs):
-        self.kwargs.get("cat_pk")
-        return DiaryNote.objects.get(pk=self.kwargs.get("cat_pk"))
+        return reverse('diary_subcat_detail', kwargs={'cat_pk': self.kwargs['cat_pk'], 'sub_pk': self.kwargs['sub_pk']})
 
     def test_func(self):
         note = self.get_object()
-        print(note)
-        if self.request.user == self.request.user:
+        if self.request.user == note.category.parent.author:
+            return True
+        return False
+
+
+class DiaryNoteDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = DiaryNote
+    pk_url_kwarg = 'note_pk'
+
+    def get_success_url(self):
+        return reverse('diary_subcat_detail', kwargs={'cat_pk': self.kwargs['cat_pk'], 'sub_pk': self.kwargs['sub_pk']})
+
+    def test_func(self):
+        note = self.get_object()
+        if self.request.user == note.category.parent.author:
             return True
         return False

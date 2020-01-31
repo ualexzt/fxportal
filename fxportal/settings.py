@@ -103,6 +103,32 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [
+            ['Undo', 'Redo',
+             '-', 'Bold', 'Italic', 'Underline',
+             '-', 'Link', 'Unlink', 'Anchor',
+             '-', 'Format',
+             '-', 'Maximize',
+             '-', 'Table',
+             '-', 'Image',
+             '-', 'Source',
+             '-', 'NumberedList', 'BulletedList',
+             'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock',
+             '-', 'Font', 'FontSize', 'TextColor',
+             '-', 'Outdent', 'Indent',
+             '-', 'HorizontalRule',
+             '-', 'Blockquote'
+             ]
+        ],
+        'height': 500,
+        'width': '100%',
+        'toolbarCanCollapse': False,
+        'forcePasteAsPlainText': True
+    }
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 

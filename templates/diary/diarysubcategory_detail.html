@@ -80,18 +80,33 @@
                 <div class="col-md-12">
                     <div class="card h-100">
                         <div class="card-header card-header-primary">
-                            <h4 class="card-title">Категория - {{ object.name }} - дневника - "{{ object.parent.name }}"</h4>
-                            <p class="card-category"> Добавьте свои мысли о торговле </p>
+                            <div class="row">
+                                <div class="col-8">
+                                    <h4 class="card-title">Раздел - {{ object.name }} - дневника -
+                                        "{{ object.parent.name }}"</h4>
+                                    <p class="card-category"> Добавьте свои мысли о торговле </p>
+                                </div>
+                                <div class="col-4 text-right">
+                                    <a href="{% url 'diary_note_create' cat_pk=object.parent.id sub_pk=object.id %}"
+                                       type="button"
+                                       rel="tooltip" class="btn btn-default">
+                                        <i class="material-icons">add</i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div class="row sticky">
                                 <ul>
                                     {% for note in notes %}
                                         <li>
-                                            <a href="#">
+
+                                            <a href="{% url 'diary_note_update' cat_pk=object.parent.id sub_pk=object.id note_pk=note.id %}">
                                                 <h2>{{ note.title }}</h2>
-                                                <small>Обновлено: {{ note.update_date|date:'b, d, Y'  }}</small>
+
+                                                <small>Обновлено: {{ note.update_date|date:'b, d, Y' }}</small>
                                             </a>
+
                                         </li>
                                     {% endfor %}
                                 </ul>

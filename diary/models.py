@@ -63,4 +63,4 @@ class DiaryNote(models.Model):
 
     def get_absolute_url(self):
         return reverse('diary_note_detail',
-                       kwargs={'main_pk': self.category.parent.pk, 'sub_pk': self.category.pk, 'note_pk': self.pk})
+                       kwargs={'cat_pk': self.category.parent.pk, 'sub_pk': self.category.pk, 'note_pk': self.pk})

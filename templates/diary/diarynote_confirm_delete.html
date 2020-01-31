@@ -11,10 +11,9 @@
                             <div class="front">
                                 <div class="card-content">
                                     <h5 class="category-social text-danger">
-                                        <i class="fa fa-newspaper-o"></i> Удалить дневник - {{ object.name }}
+                                        <i class="fa fa-newspaper-o"></i> Удалить запись - {{ object.title }}
                                     </h5>
-                                    <small class="text-danger"> При удалении дневника Вы потеряеете все записи сделанные
-                                        в нем!!!</small>
+                                    <small class="text-danger"> Удалив запись Вы не сможете ее восстановить!!!</small>
                                     <br>
                                     <br>
                                     <br>
@@ -23,7 +22,7 @@
                                         <button type="submit" class="btn btn-danger btn-sm pull-center">Удалить
                                         </button>
                                         <a class="btn btn-primary btn-sm pull-right"
-                                           href="{% url 'diary_cat_detail' cat_pk=object.patent.id %}">Отменить</a>
+                                           href="{% url 'diary_note_update' cat_pk=object.category.parent.id sub_pk=object.category.id note_pk=object.id %}">Отменить</a>
                                         <div class="clearfix"></div>
                                     </form>
                                 </div>

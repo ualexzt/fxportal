@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="" />
+    <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/blog/migrations/0007_auto_20200130_2011.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diary/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profiles/migrations/0004_auto_20200130_2011.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/diary/diarynote_confirm_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fxportal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fxportal/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/diary_img/diary.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/diary_img/diary.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/diary/diary_subcategory_confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/diarysubcategory_confirm_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/diary/diarycategory_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/diarycategory_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/diary/diarynote_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/diarynote_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/diary/diarysubcategory_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/diarysubcategory_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/include/nav_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/include/nav_base.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +55,13 @@
         <item name="SQLite - db.sqlite3" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="SQLite - db.sqlite3" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="diary_diarynote: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -193,6 +218,10 @@
       <workItem from="1580397786180" duration="482000" />
       <workItem from="1580398346742" duration="810000" />
       <workItem from="1580411344858" duration="4041000" />
+      <workItem from="1580416386612" duration="80000" />
+      <workItem from="1580454643655" duration="7351000" />
+      <workItem from="1580479055880" duration="2539000" />
+      <workItem from="1580484895641" duration="325000" />
     </task>
     <task id="LOCAL-00001" summary="add blog app and create models, migrations">
       <created>1578146858594</created>
@@ -404,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580416050847</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="rename form">
+      <created>1580416449224</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1580416449224</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +478,8 @@
     <MESSAGE value="add Diary apps" />
     <MESSAGE value="add img file" />
     <MESSAGE value="error correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="error correction" />
+    <MESSAGE value="rename form" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename form" />
   </component>
   <component name="WindowStateProjectService">
     <state x="283" y="49" key="#Inspections" timestamp="1578499462291">
@@ -454,9 +491,10 @@
     </state>
     <state x="283" y="49" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1580415748956" />
     <state x="283" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1366.745@0.23.1366.745" timestamp="1579775317275" />
-    <state x="421" y="149" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580232167861">
-      <screen x="0" y="23" width="1366" height="745" />
+    <state x="421" y="137" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580461392424">
+      <screen x="0" y="23" width="1366" height="677" />
     </state>
+    <state x="421" y="137" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1366.677@0.23.1366.677" timestamp="1580461392424" />
     <state x="421" y="149" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1366.745@0.23.1366.745" timestamp="1580232167861" />
     <state x="219" y="230" width="927" height="331" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog" timestamp="1579027976052">
       <screen x="0" y="23" width="1366" height="745" />
@@ -466,10 +504,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="435" y="247" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1578590068309" />
-    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2" timestamp="1580416050353">
+    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2" timestamp="1580416448361">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1580416050353" />
+    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1580416448361" />
     <state x="294" y="23" key="CommitChangelistDialog2/0.23.1366.745@0.23.1366.745" timestamp="1579811020946" />
     <state x="484" y="262" width="475" height="199" key="Github.ShareDialog" timestamp="1578133046855">
       <screen x="0" y="23" width="1366" height="675" />
@@ -533,15 +571,24 @@
     <state x="232" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1580411508649" />
     <state x="192" y="23" key="SettingsEditor/0.23.1366.675@0.23.1366.675" timestamp="1578132822236" />
     <state x="232" y="45" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1579170020275" />
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1580416056125">
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1580416451599">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1580416056125" />
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1580416451599" />
     <state x="283" y="143" key="Vcs.Push.Dialog.v2/0.23.1366.745@0.23.1366.745" timestamp="1579811026598" />
-    <state x="471" y="214" width="423" height="335" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1580415811561">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="421" y="173" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1580461299698">
+      <screen x="0" y="23" width="1366" height="677" />
+    </state>
+    <state x="421" y="173" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.23.1366.677@0.23.1366.677" timestamp="1580461299698" />
+    <state x="471" y="212" width="522" height="436" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1580461156939">
+      <screen x="0" y="23" width="1366" height="677" />
     </state>
     <state x="471" y="214" width="423" height="335" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1366.768@0.0.1366.768" timestamp="1580415811561" />
+    <state x="471" y="212" width="522" height="436" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.23.1366.677@0.23.1366.677" timestamp="1580461156939" />
+    <state x="412" y="35" width="725" height="653" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1580461230897">
+      <screen x="0" y="23" width="1366" height="677" />
+    </state>
+    <state x="412" y="35" width="725" height="653" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.23.1366.677@0.23.1366.677" timestamp="1580461230897" />
     <state x="362" y="194" key="com.intellij.ide.util.TipDialog" timestamp="1580397199245">
       <screen x="0" y="23" width="1366" height="677" />
     </state>
