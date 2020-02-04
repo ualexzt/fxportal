@@ -4,11 +4,10 @@
     <div class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="card">
                         <div class="card-header card-header-primary">
-                            <h4 class="card-title">Edit Profile</h4>
-                            <p class="card-category">Complete your profile</p>
+                            <h4 class="card-title">Редактировать информацию о себе</h4>
                         </div>
                         <div class="card-body">
                             <form method="post" enctype="multipart/form-data">
@@ -100,22 +99,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card card-profile">
-                        <div class="card-avatar">
-                            <a href="">
-                                <img class="img" src="{{ user.profile.image.url }}"/>
-                            </a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="card-category text-gray">CEO / Co-Founder</h6>
-                            <h4 class="card-title">{{ user.get_full_name }}</h4>
-                            <p class="card-description">
-                                {{ user.profile.description }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

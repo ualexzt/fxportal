@@ -38,3 +38,8 @@ def profile_main(request):
 @login_required
 def dashboard(request):
     return render(request, 'profiles/profile_dashboard.html')
+
+
+@login_required
+def subscription(request):
+    return render(request, 'profiles/profile_subscription.html')

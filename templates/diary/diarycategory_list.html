@@ -1,63 +1,66 @@
 {% extends 'base_profile.html' %}
 {% load static %}
 {% block content %}
-    <div class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header card-header-primary">
-                            <div class="row">
-                                <div class="col-8">
-                                    <h4 class="card-title mt-0"> Текущие дневники</h4>
-                                    <p class="card-category"> Here is a subtitle for this table</p>
-                                </div>
-                                <div class="col-4 text-right"><a href="{% url 'diary_cat_create' %}" type="button"
-                                                                 rel="tooltip" class="btn btn-default">
-                                    <i class="material-icons">add</i>
-                                </a></div>
+   <div class="edit-table">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-8">
+                                <h5 class="header-title">Ваши дневники</h5>
+                            </div>
+                            <div class="col-4 text-right"><a
+                                    href="{% url 'diary_cat_create' %}"
+                                    type="button"
+                                    rel="tooltip" class="btn btn-default">
+                                <i class="mdi mdi-library-plus">Новый дневник</i>
+                            </a>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <div class="row">
-                                {% for categoty in diarycategory_list %}
-                                    <div class="col-md-4">
-                                        <div class="card card-blog">
-                                            <div class="card-image">
-                                                <a href="{{ categoty.get_absolute_url }}">
-                                                    <img src="{{ categoty.cat_img.url }}" height="200px" alt=""/>
-                                                </a>
+                        <div class="">
+                            <table class="table" id="my-table">
+                                <thead>
+                                <tr>
+                                    <th>Дневник</th>
+                                    <th>Дата обновления</th>
+                                    <th>Количество категорий</th>
+                                    <th>Количество заметок</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                {% for category in object_list %}
+                                    <tbody>
+                                    <tr>
+                                        <td><a href="{{ category.get_absolute_url }}">{{ category.name }}</a></td>
+                                        <td>{{ category.update_date|date:'b, d, Y' }}</td>
+                                        <td>{{ category.diarysubcategory_set.count }}</td>
+                                        <td></td>
+                                        <td style="white-space: nowrap; width: 15%;">
+                                            <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
+                                                <div class="btn-group btn-group-sm" style="float: none;">
+                                                    <a href="{% url 'diary_cat_update'  cat_pk=category.id %}"
+                                                       type="button"
+                                                       class="tabledit-edit-button btn btn-sm btn-info"
+                                                       style="float: none; margin: 5px;"><span
+                                                            class="ti-pencil"></span></a>
+                                                    <a href="{% url 'diary_cat_delete' cat_pk=category.id %}"
+                                                       type="button"
+                                                       class="tabledit-delete-button btn btn-sm btn-info"
+                                                       style="float: none; margin: 5px;"><span
+                                                            class="ti-trash"></span></a>
+                                                </div>
                                             </div>
-                                            <div class="card-content">
-                                                <h6 class="category text-rose text-center">Торговый дневник</h6>
-                                                <h4 class="card-title">
-                                                    <a href="{{ categoty.get_absolute_url }}">{{ categoty.name }}</a>
-                                                </h4>
-                                                <br>
-                                                <small>Обновлен: {{ categoty.update_date }}</small>
-                                            </div>
-                                            <div class="text-center">
-                                                <a href="{% url 'diary_cat_update' cat_pk=categoty.id %}" type="button"
-                                                   rel="tooltip" class="btn btn-round btn-sm btn-success">
-                                                    <i class="material-icons">edit</i>
-                                                </a>
-                                                <a href="{% url 'diary_cat_delete' cat_pk=categoty.id %}" type="button"
-                                                   rel="tooltip" class="btn btn-round btn-sm btn-danger">
-                                                    <i class="material-icons">close</i>
-                                                </a>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
+                                        </td>
+                                    </tr>
+                                    </tbody>
                                 {% endfor %}
-                            </div>
+
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
-
-        </div>
+        </div><!--end row-->
     </div>
-
 {% endblock %}
