@@ -1,7 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %} Main blog page {% endblock %}
-
+{% block header %}
+    <div class="page-header header-filter header-small" data-parallax="true"
+         style="background-image: url('{% static 'assets/img/bg_blog.jpg' %}');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h3 class="title">«Рисковать следует не больше, чем можно себе позволить потерять, но одновременно
+                        достаточно для того, чтобы выигрыш получился существенным»
+                    </h3>
+                    <h6 class="text-right">Edward Seykota
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
 {% block content %}
     <div class="section">
         <div class="row">
@@ -15,42 +30,7 @@
                 <hr>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card card-raised card-background"
-                     style="background-image: url('../assets/img/examples/office2.jpg')">
-                    <div class="card-content">
-                        <h6 class="category text-info">Worlds</h6>
-                        <a href="#pablo">
-                            <h3 class="card-title">The Best Productivity Apps on Market</h3>
-                        </a>
-                        <p class="card-description">
-                            Don't be scared of the truth because we need to restart the human foundation in truth And I
-                            love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                        </p>
-                        <a href="#pablo" class="btn btn-danger btn-round">
-                            <i class="material-icons">format_align_left</i> Read Article
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card card-raised card-background"
-                     style="background-image: url('../assets/img/examples/blog8.jpg')">
-                    <div class="card-content">
-                        <h6 class="category text-info">Business</h6>
-                        <h3 class="card-title">Working on Wallstreet is Not So Easy</h3>
-                        <p class="card-description">
-                            Don't be scared of the truth because we need to restart the human foundation in truth And I
-                            love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                        </p>
-                        <a href="#pablo" class="btn btn-primary btn-round">
-                            <i class="material-icons">format_align_left</i> Read Article
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <div class="row">
             <div class="blogs-3">
                 <div class="container">

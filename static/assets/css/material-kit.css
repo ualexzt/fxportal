@@ -2815,7 +2815,7 @@ select.form-control[multiple],
     height: 50px;
     line-height: 30px;
     color: inherit;
-    padding: 10px 15px;
+    padding: 0px 0px;
 }
 
 .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {

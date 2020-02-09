@@ -155,8 +155,8 @@ MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 LOGIN_URL = '/profiles/login/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-LOGIN_REDIRECT_URL = 'post_list'
-LOGOUT_REDIRECT_URL = 'post_list'
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'index'
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

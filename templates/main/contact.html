@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="contactus-1 section-image" style="background-image: url('{% static 'assets/img/contact.jpg' %}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h2 class="title">Get in Touch</h2>
+                    <h5 class="description">You need more information? Check what other persons are saying about our
+                        product. They are very happy with their purchase.</h5>
+                    <div class="info info-horizontal">
+                        <div class="icon icon-primary">
+                            <i class="material-icons">pin_drop</i>
+                        </div>
+                        <div class="description">
+                            <h4 class="info-title">Find us at the office</h4>
+                            <p> Bld Mihail Kogalniceanu, nr. 8,<br>
+                                7652 Bucharest,<br>
+                                Romania
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info info-horizontal">
+                        <div class="icon icon-primary">
+                            <i class="material-icons">phone</i>
+                        </div>
+                        <div class="description">
+                            <h4 class="info-title">Give us a ring</h4>
+                            <p> Michael Jordan<br>
+                                +40 762 321 762<br>
+                                Mon - Fri, 8:00-22:00
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-5 col-md-offset-2">
+                    <div class="card card-contact">
+                        {% if sent %}
+                            <div class="alert alert-success">
+                                <div class="container">
+                                    <div class="alert-icon">
+                                        <i class="material-icons">check</i>
+                                    </div>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                                    </button>
+                                    <b>Письмо отправленно!</b>
+                                </div>
+                            </div>
+                        {% else %}
+                            <form action="{% url 'contacts' %}" method="post">
+                                {% csrf_token %}
+                                <div class="header header-raised header-primary text-center">
+                                    <h4 class="card-title">Связаться с нами</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">First name</label>
+                                                <input type="text" name="firstname" id="id_firstname"
+                                                       class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Last name</label>
+                                                <input type="text" name="lastname" id="id_lastname"
+                                                       class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Email address</label>
+                                        <input type="email" name="sender" id="id_sender" class="form-control"/>
+                                    </div>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Your message</label>
+                                        <textarea name="message" id="id_message" class="form-control" id="message"
+                                                  rows="6"></textarea>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" name="optionsCheckboxes">
+                                                    I'm not a robot
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button type="submit" class="btn btn-primary pull-right">Send Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
