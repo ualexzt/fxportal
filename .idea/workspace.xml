@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/assets/js/arrive.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/bootstrap-notify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/chartist.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/fullcalendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery-jvectormap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.bootstrap-wizard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.datatables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.select-bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.sharrre.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.tagsinput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/material-dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/js/sweetalert2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fxportal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fxportal/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/diary_img/diary.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/media/diary_img/diary.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/diary/diarycategory_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/diarycategory_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/diary/diarynote_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/diary/diarynote_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profiles/profile_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profiles/profile_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/python" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/python3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/python3.8" beforeDir="false" />
-    </list>
+    <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -236,7 +210,7 @@
       <workItem from="1580748642089" duration="4784000" />
       <workItem from="1580818256438" duration="991000" />
       <workItem from="1581232373223" duration="8192000" />
-      <workItem from="1581245625774" duration="1539000" />
+      <workItem from="1581245625774" duration="1766000" />
     </task>
     <task id="LOCAL-00001" summary="add blog app and create models, migrations">
       <created>1578146858594</created>
@@ -469,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580488096264</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="update profile directory">
+      <created>1581247460866</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1581247460866</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +490,8 @@
     <MESSAGE value="error correction" />
     <MESSAGE value="rename form" />
     <MESSAGE value="add note create, update, delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="add note create, update, delete" />
+    <MESSAGE value="update profile directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="update profile directory" />
   </component>
   <component name="WindowStateProjectService">
     <state x="283" y="49" key="#Inspections" timestamp="1578499462291">
@@ -538,10 +520,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="435" y="247" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1578590068309" />
-    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2" timestamp="1580488094580">
+    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2" timestamp="1581247458854">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1580488094580" />
+    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1581247458854" />
     <state x="294" y="23" key="CommitChangelistDialog2/0.23.1366.745@0.23.1366.745" timestamp="1579811020946" />
     <state x="413" y="223" key="FileChooserDialogImpl" timestamp="1581247244373">
       <screen x="0" y="0" width="1366" height="768" />
@@ -609,10 +591,10 @@
     <state x="232" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1581247260549" />
     <state x="192" y="23" key="SettingsEditor/0.23.1366.675@0.23.1366.675" timestamp="1578132822236" />
     <state x="232" y="45" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1579170020275" />
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1580488097793">
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1581247464002">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1580488097793" />
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1581247464002" />
     <state x="283" y="143" key="Vcs.Push.Dialog.v2/0.23.1366.745@0.23.1366.745" timestamp="1579811026598" />
     <state x="421" y="173" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1580461299698">
       <screen x="0" y="23" width="1366" height="677" />
