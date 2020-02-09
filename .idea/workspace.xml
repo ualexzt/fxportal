@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/dg1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/img/dg1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/dg2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/img/dg2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/dg3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/img/dg3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/img/favicon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/include/nav_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/include/nav_base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html" afterDir="false" />
     </list>
@@ -220,7 +216,7 @@
       <workItem from="1581232373223" duration="8192000" />
       <workItem from="1581245625774" duration="1766000" />
       <workItem from="1581247692524" duration="592000" />
-      <workItem from="1581252150852" duration="1269000" />
+      <workItem from="1581252150852" duration="2705000" />
     </task>
     <task id="LOCAL-00001" summary="add blog app and create models, migrations">
       <created>1578146858594</created>
@@ -474,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581248635806</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="refactoring">
+      <created>1581254171453</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1581254171453</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +520,8 @@
     <MESSAGE value="update profile directory" />
     <MESSAGE value="delete static/profile" />
     <MESSAGE value="add gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
+    <MESSAGE value="refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
   </component>
   <component name="WindowStateProjectService">
     <state x="283" y="49" key="#Inspections" timestamp="1578499462291">
@@ -546,10 +550,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="435" y="247" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1578590068309" />
-    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2" timestamp="1581254157427">
+    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2" timestamp="1581254170716">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1581254157427" />
+    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1581254170716" />
     <state x="294" y="23" key="CommitChangelistDialog2/0.23.1366.745@0.23.1366.745" timestamp="1579811020946" />
     <state x="413" y="223" key="FileChooserDialogImpl" timestamp="1581247244373">
       <screen x="0" y="0" width="1366" height="768" />
@@ -617,10 +621,10 @@
     <state x="232" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1581247260549" />
     <state x="192" y="23" key="SettingsEditor/0.23.1366.675@0.23.1366.675" timestamp="1578132822236" />
     <state x="232" y="45" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1579170020275" />
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1581248638214">
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1581254173643">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1581248638214" />
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1581254173643" />
     <state x="283" y="143" key="Vcs.Push.Dialog.v2/0.23.1366.745@0.23.1366.745" timestamp="1579811026598" />
     <state x="421" y="173" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1580461299698">
       <screen x="0" y="23" width="1366" height="677" />
