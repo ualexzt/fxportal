@@ -4,102 +4,146 @@
     <div class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-8">
                     <div class="card">
-                        <div class="card-header card-header-primary">
-                            <h4 class="card-title">Редактировать информацию о себе</h4>
+                        <div class="card-header card-header-icon" data-background-color="rose">
+                            <i class="material-icons">perm_identity</i>
                         </div>
-                        <div class="card-body">
+                        <div class="card-content">
+                            <h4 class="card-title">Редактировать данные профиля - <small
+                                    class="category">{{ user.username }}</small>
+                            </h4>
+
                             <form method="post" enctype="multipart/form-data">
                                 {% csrf_token %}
-                                <div class="row mt-2">
-                                    <div class="col-md-6">
-                                        <input type="file" class="form-control" id="exampleInputFile"
-                                               name="image">
-                                    </div>
-                                    <div class=" col-md-6">
-                                        <div class="form-group">
-                                            <label class="bmd-label-floating">Learn group</label>
-                                            <input type="text" class="form-control" value="{{ user.profile.categiry_learn }}" disabled>
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                            <div class="fileinput-new thumbnail img-circle">
+                                                <img src="{{ user.profile.image.url }}" alt="...">
+                                            </div>
+                                            <div class="fileinput-preview fileinput-exists thumbnail img-circle"></div>
+                                            <div>
+				                            	<span class="btn btn-round btn-rose btn-file">
+				                            	<span class="fileinput-new">Add Photo</span>
+			                            		<input input type="file" name="image" accept="image/*" id="id_image"></span>
+                                                <br/>
+                                                <a href="" class="btn btn-danger btn-round fileinput-exists"
+                                                   data-dismiss="fileinput"><i class="fa fa-times"></i> Remove</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row mt-2">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="id_username" class=" bmd-label-floating">Username</label>
+
+                                    <div class="col-md-5">
+                                        <div class="form-group label-floating">
+                                            <label class="bmd-label-floating">Learn group</label>
+                                            <input type="text" class="form-control"
+                                                   value="{{ user.profile.categiry_learn }}" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group label-floating">
+                                            <label for="id_username"
+                                                   class=" bmd-label-floating">Username</label>
                                             <input type="text" name="username" class="form-control" required
                                                    id='id_username' value="{{ user.username }}">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="id_email" class="bmd-label-floating">Email address</label>
-                                            <input name="email" value="{{ user.email }}" class="emailinput form-control"
+                                    <div class="col-md-4">
+                                        <div class="form-group label-floating">
+                                            <label for="id_email" class="bmd-label-floating">Email
+                                                address</label>
+                                            <input name="email" value="{{ user.email }}"
+                                                   class="emailinput form-control"
                                                    required id="id_email" type="email">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row mt-2">
+
+                                <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="id_first_name" class="bmd-label-floating">Fist Name</label>
+                                        <div class="form-group label-floating">
+                                            <label for="id_first_name" class="bmd-label-floating">Fist
+                                                Name</label>
                                             <input name="first_name" value="{{ user.first_name }}" type="text"
                                                    class="form-control" required id="id_first_name">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="id_last_name" class="bmd-label-floating">Last Name</label>
+                                        <div class="form-group label-floating">
+                                            <label for="id_last_name" class="bmd-label-floating">Last
+                                                Name</label>
                                             <input name="last_name" value="{{ user.last_name }}" type="text"
                                                    class="form-control" required id="id_last_name">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row mt-2">
+
+                                <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label class="bmd-label-floating">Adress</label>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Adress</label>
                                             <input type="text" class="form-control">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row mt-2">
+
+                                <div class="row">
                                     <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="bmd-label-floating">City</label>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">City</label>
                                             <input type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="bmd-label-floating">Country</label>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Country</label>
                                             <input type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label class="bmd-label-floating">Postal Code</label>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Postal Code</label>
                                             <input type="text" class="form-control">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row mt-2">
+
+                                <div class="row">
                                     <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="id_description" class="bmd-label-floating">About Me </label>
+                                        <div class="form-group label-floating">
+                                            <label for="id_description" class="bmd-label-floating">About
+                                                Me </label>
                                             <textarea name="description" class="form-control" rows="3" required
                                                       id="id_description">{{ user.profile.description }}</textarea>
                                         </div>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                                <button type="submit" class="btn btn-rose pull-right">Update Profile</button>
                                 <div class="clearfix"></div>
                             </form>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="card card-profile">
+                        <div class="card-avatar">
+                            <a href="#pablo">
+                                <img class="img" src="{{ user.profile.image.url }}"/>
+                            </a>
+                        </div>
 
+                        <div class="card-content">
+                            <h6 class="category text-gray">{{ user.profile.categiry_learn }}</h6>
+                            <h4 class="card-title">{{ user.get_full_name }}</h4>
+                            <p class="description">
+                                {{ user.profile.description }}
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -123,7 +123,7 @@ CKEDITOR_CONFIGS = {
              '-', 'Blockquote'
              ]
         ],
-        'height': 500,
+        'height': 900,
         'width': '100%',
         'toolbarCanCollapse': False,
         'forcePasteAsPlainText': True

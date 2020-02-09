@@ -1,0 +1,3 @@
+ICEPageTrURL: https://www.theice.com/products/194/US-Dollar-Index-Futures/margin-rates
+MinimumPrice: 10
+17.01.2018  1650

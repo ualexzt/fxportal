@@ -1,0 +1,3 @@
+CMEPageTrURL: /trading/energy/crude-oil/light-sweet-crude_performance_bonds.html#sortField=exchange&sortAsc=true&clearingCode=CL&sector=CRUDE+OIL&exchange=NYM&pageNumber=1
+MinimumPrice: 10.00
+01.01.2020  3975

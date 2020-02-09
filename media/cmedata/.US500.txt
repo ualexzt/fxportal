@@ -1,0 +1,3 @@
+CMEPageTrURL: /trading/equity-index/us-index/sandp-500_performance_bonds.html#sortField=exchange&sortAsc=true&clearingCode=SP&sector=EQUITY+INDEX&exchange=CME&pageNumber=1
+MinimumPrice: 25.00
+08.01.2009  31500
