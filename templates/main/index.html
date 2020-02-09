@@ -2,123 +2,36 @@
 {% load static %}
 {% block title %} Main page of progect{% endblock %}
 {% block header %}
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <div class="carousel slide" data-ride="carousel">
+    <div class="page-header header-filter"
+         style="background-image: url('{% static 'assets/img/dg2.jpg' %}');">
 
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <div class="page-header header-filter"
-                         style="background-image: url('{% static 'assets/img/dg1.jpg' %}');">
-
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6 text-left">
-                                    <h1 class="title">Побарный анализ</h1>
-                                    <h4>Методика анализа графика в трейдинге с целью определения дальнейшего движения
-                                        цены актива. В основу методики лег анализ объёма спредов (VSA).</h4>
-                                    <br/>
-
-                                    <div class="buttons">
-                                        <a href="#pablo" class="btn btn-primary btn-lg">
-                                            Read More
-                                        </a>
-                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
-                                            <i class="fa fa-facebook-square"></i>
-                                        </a>
-                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
-                                            <i class="fa fa-get-pocket"></i>
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h1 class="title">Торговля может быть прибыльной!</h1>
+                    <h4>Секрет успешного трейдинга прост – настойчивость в достижении цели, постоянное
+                        обучение и работа над собой.</h4>
+                    <br/>
+                    <h6>Присоединяйся:</h6>
+                    <div class="buttons">
+                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                            <i class="fa fa-facebook-square"></i>
+                        </a>
+                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                            <i class="fa fa-instagram"></i>
+                        </a>
                     </div>
-
                 </div>
-                <div class="item">
-                    <div class="page-header header-filter"
-                         style="background-image: url('{% static 'assets/img/dg2.jpg' %}');">
-
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-8 col-md-offset-2 text-center">
-                                    <h1 class="title">Торговля может быть прибыльной!</h1>
-                                    <h4>Секрет успешного трейдинга прост – настойчивость в достижении цели, постоянное
-                                        обучение и работа над собой.</h4>
-                                    <br/>
-                                    <h6>Connect with us on:</h6>
-                                    <div class="buttons">
-                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
-                                            <i class="fa fa-twitter"></i>
-                                        </a>
-                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
-                                            <i class="fa fa-facebook-square"></i>
-                                        </a>
-                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
-                                            <i class="fa fa-google-plus"></i>
-                                        </a>
-                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
-                                            <i class="fa fa-instagram"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="item">
-                    <div class="page-header header-filter"
-                         style="background-image: url('{% static 'assets/img/dg3.jpg' %}');">
-
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-7 col-md-offset-5 text-right">
-                                    <h1 class="title">Обучение без воды до результата</h1>
-                                    <h4>Трейдинг для начинающих — это нелегкий путь, который проще всего преодолеть с
-                                        профессиональным наставником.</h4>
-                                    <br/>
-
-                                    <div class="buttons">
-                                        <a href="#pablo" class="btn btn-danger btn-lg">
-                                            <i class="material-icons">shopping_cart</i> Присоедениться
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                <i class="material-icons">keyboard_arrow_left</i>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                <i class="material-icons">keyboard_arrow_right</i>
-            </a>
         </div>
-    </div>
 
+    </div>
 {% endblock %}
 {% block content %}
     <div class="section text-center">
