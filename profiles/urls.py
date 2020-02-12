@@ -1,5 +1,6 @@
 from django.urls import path
-from .views import profile_main, register, dashboard, subscription
+from .views import profile_main, register, dashboard, subscription, StudentEnrollCourseView, StudentCourseListView, \
+    StudentCourseDetailView
 from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView, PasswordResetDoneView, \
     PasswordResetConfirmView, PasswordResetCompleteView
 
@@ -20,4 +21,8 @@ urlpatterns = [
     path('', profile_main, name='profile_main'),
     path('dashboard/', dashboard, name='dashboard'),
     path('subscription/', subscription, name='subscription'),
+    path('enroll-course/', StudentEnrollCourseView.as_view(), name='student_enroll_course'),
+    path('courses/', StudentCourseListView.as_view(), name='student_course_list'),
+    path('course/<pk>/', StudentCourseDetailView.as_view(), name='student_course_detail'),
+    path('course/<pk>/<module_id>/', StudentCourseDetailView.as_view(), name='student_course_detail_module'),
 ]

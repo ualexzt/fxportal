@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ object.title }}
+{% endblock %}
+
+{% block content %}
+    {% with subject=course.subject %}
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <h5 class="category-social">
+                                    <i class="fa fa-newspaper-o">     {{ object.title }}</i>
+                                </h5>
+                                <h4 class="card-title">
+                                    "Обзор курса":
+                                </h4>
+                                <div class="card-description">
+                                    <a href="{% url "course_list_subject" subject.slug %}">
+                                        {{ subject.title }}</a>.
+                                    {{ course.modules.count }} modules.
+                                    Преподаватль: {{ course.owner.get_full_name }}
+                                </div>
+                                <div class="footer text-center">
+                                    {{ object.overview|linebreaks }}
+                                    {% if request.user.is_authenticated %}
+                                        <form action="{% url "student_enroll_course" %}" method="post">
+                                            {{ enroll_form }}
+                                            {% csrf_token %}
+                                            <input type="submit" class="btn btn-info" value="Записаться на курс">
+                                        </form>
+                                    {% else %}
+                                        <a href="{% url "register" %}" class="btn btn-info">
+                                            Зарегистрируйтесь для прохождения курса
+                                        </a>
+                                    {% endif %}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endwith %}
+{% endblock %}

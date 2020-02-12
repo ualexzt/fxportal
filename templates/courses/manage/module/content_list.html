@@ -1,0 +1,136 @@
+{% extends "base_profile.html" %}
+{% load course %}
+
+{% block title %}
+    Module {{ module.order|add:1 }}: {{ module.title }}
+{% endblock %}
+{% block content %}
+    {% with course=module.course %}
+        <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-icon" data-background-color="purple">
+                            <i class="material-icons">book</i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Курс - "{{ course.title }}"</h4>
+                            <div class="card-body">
+
+                                <div class="col-md-4">
+                                    <ul class="nav nav-pills nav-pills-rose nav-stacked" id="modules">
+                                        {% for m in course.modules.all %}
+                                            <li data-id="{{ m.id }}" {% if m == module %}
+                                                class="selected"{% endif %}>
+                                                <a href="{% url "module_content_list" m.id %}">
+                                                    <span>
+                                                      Модуль <span class="order">{{ m.order|add:1 }}</span>
+                                                    </span>
+                                                    <br>
+                                                    {{ m.title }}
+                                                </a>
+                                            </li>
+                                        {% empty %}
+                                            <li>No modules yet.</li>
+                                        {% endfor %}
+                                    </ul>
+                                    <p><a class="btn btn-info btn-xs" href="{% url "course_module_update" course.id %}">
+                                        Редактировать модуль</a></p>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <div class="card">
+                                        <div class="card-content content-success">
+                                            <h5 class="category-social">
+                                                <i class="fa fa-newspaper-o"></i>
+                                                Модуль {{ module.order|add:1 }}: {{ module.title }}
+                                            </h5>
+                                            <h4 class="card-title">
+                                                "Материалы модуля:"
+                                            </h4>
+
+                                            <div class="card-description" id="module-contents">
+                                                {% for content in module.contents.all %}
+                                                    <div data-id="{{ content.id }}">
+                                                        {% with item=content.item %}
+                                                            <p>{{ item }} ({{ item|model_name }})</p>
+                                                            <a href="{% url "module_content_update" module.id item|model_name item.id %}">Edit</a>
+                                                            <form action="{% url "module_content_delete" content.id %}"
+                                                                  method="post">
+                                                                <input type="submit" value="Delete">
+                                                                {% csrf_token %}
+                                                            </form>
+                                                        {% endwith %}
+                                                    </div>
+                                                {% empty %}
+                                                    <p>У этого модуля еще нет опубликованных материалов</p>
+                                                {% endfor %}
+                                            </div>
+                                            <small>Add new content:</small>
+                                            <div class="footer text-center">
+
+                                                <a class="btn btn-white btn-round"
+                                                   href="{% url "module_content_create" module.id "text" %}">
+                                                    Text</a>
+                                                <a class="btn btn-white btn-round"
+                                                   href="{% url "module_content_create" module.id "image" %}">
+                                                    Image</a>
+                                                <a class="btn btn-white btn-round"
+                                                   href="{% url "module_content_create" module.id "video" %}">
+                                                    Video</a>
+                                                <a class="btn btn-white btn-round"
+                                                   href="{% url "module_content_create" module.id "file" %}">
+                                                    File</a>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endwith %}
+{% endblock %}
+{% block domready %}
+    $('#modules').sortable({
+    stop: function(event, ui) {
+    modules_order = {};
+    $('#modules').children().each(function(){
+    // update the order field
+    $(this).find('.order').text($(this).index() + 1);
+    // associate the module's id with its order
+    modules_order[$(this).data('id')] = $(this).index();
+    });
+    $.ajax({
+    type: 'POST',
+    url: '{% url "module_order" %}',
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
+    data: JSON.stringify(modules_order)
+    });
+    }
+    });
+
+    $('#module-contents').sortable({
+    stop: function(event, ui) {
+    contents_order = {};
+    $('#module-contents').children().each(function(){
+    // associate the module's id with its order
+    contents_order[$(this).data('id')] = $(this).index();
+    });
+
+    $.ajax({
+    type: 'POST',
+    url: '{% url "content_order" %}',
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
+    data: JSON.stringify(contents_order),
+    });
+    }
+    });
+{% endblock %}

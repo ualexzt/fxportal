@@ -1,0 +1,47 @@
+{% extends "base_profile.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    {% if object %}
+        Edit course "{{ object.title }}"
+    {% else %}
+        Create a new course
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-icon" data-background-color="purple">
+                            <i class="material-icons">book</i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">  {% if object %}
+                                Редактирование курса "{{ object.title }}"
+                            {% else %}
+                                Создайте новый курс
+                            {% endif %}</h4>
+                            <div class="">
+                                <div class="module">
+                                    <h2>Информация про курс</h2>
+                                    <form action=".." method="post">
+                                        {{ form|crispy }}
+                                        {% csrf_token %}
+                                        <p><input type="submit" value="Save course"></p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

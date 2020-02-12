@@ -1,0 +1,32 @@
+{% extends "base_profile.html" %}
+
+{% block title %}Delete course{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-icon" data-background-color="purple">
+                            <i class="material-icons">book</i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title"> Удаление курса "{{ object.title }}" </h4>
+                            <div class="">
+
+                                <div class="module">
+                                    <form action="" method="post">
+                                        {% csrf_token %}
+                                        <p>Вы действительно хотите удалить всю информацию по курсу - "{{ object }}"?</p>
+                                        <input type="submit" class = "btn btn-danger btn-sm" value="Удалить">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

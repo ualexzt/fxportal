@@ -9,10 +9,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{% url 'post_list' %}">
+            <a class="navbar-brand" href="{% url 'index' %}">
                 <div class="logo">
-                    <img src="{% static 'assets/img/logo.png' %}" width="50" height="50">
+                    <img src="{% static 'assets/img/logo.png' %}" width="70" height="50">  <span>Trading Space</span>
                 </div>
+
             </a>
         </div>
         <div class="collapse navbar-collapse">
@@ -29,7 +30,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="{% url 'course_list' %}">
                         <i class="material-icons">extension</i> Обучение
                     </a>
                 </li>
@@ -42,14 +43,14 @@
 
                 {% if user.is_authenticated %}
                     <li class="dropdown">
-                        <a href="{% url 'dashboard' %}" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="material-icons">account_circle</i> Личный кабинет
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="material-icons">account_circle</i> Hi, {{ user.username }}
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu dropdown-with-icons">
                             <li>
-                                <a href="{% url 'profile_main' %}">
-                                    <i class="material-icons">account_balance</i> Редактировать профиль
+                                <a href="{% url 'dashboard' %}">
+                                    <i class="material-icons">account_balance</i> Личный кабинет
                                 </a>
                             </li>
                             <li>

@@ -1,0 +1,88 @@
+{% extends "base_profile.html" %}
+
+{% block title %}My courses{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-icon" data-background-color="purple">
+                            <i class="material-icons">book</i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Ваши учебные курсы</h4>
+                            <a class="btn btn-primary btn-sm" href="{% url "course_create" %}">Создать новый
+                                курс</a>
+                            <div class="card-body">
+                                {% for course in object_list %}
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="rotating-card-container manual-flip">
+                                            <div class="card card-rotate">
+                                                <div class="front">
+                                                    <div class="card-content">
+                                                        <h5 class="category-social text-success">
+                                                            <i class="fa fa-newspaper-o"></i> {{ course.subject }}
+                                                        </h5>
+                                                        <h4 class="card-title">
+                                                            "{{ course.title }}"
+                                                        </h4>
+                                                        <p class="card-description">
+                                                            {{ course.overview |truncatechars:100 }}
+                                                        </p>
+                                                        <div class="footer text-center">
+                                                            <a href="{% url "course_module_update" course.id %}"
+                                                               class="btn btn-info btn-just-icon btn-fill btn-round btn-tooltip"
+                                                               data-toggle="tooltip"
+                                                               data-placement="top"
+                                                               title="Модули курса"
+                                                               data-container="body">
+                                                                <i class="material-icons">subject</i>
+                                                            </a>
+                                                            {% if course.modules.count > 0 %}
+                                                                <a href="{% url "module_content_list" course.modules.first.id %}"
+                                                                   class="btn btn-info btn-just-icon btn-fill btn-round btn-tooltip"
+                                                                   data-toggle="tooltip"
+                                                                   data-placement="top"
+                                                                   title="Управление контентом"
+                                                                   data-container="body">
+                                                                    <i class="material-icons">view_module</i>
+                                                                </a>
+                                                            {% endif %}
+                                                            <a href="{% url "course_edit" course.id %}"
+                                                               class="btn btn-success btn-just-icon btn-fill btn-round btn-wd btn-tooltip"
+                                                               data-toggle="tooltip"
+                                                               data-placement="top"
+                                                               title="Редактировать курс"
+                                                               data-container="body">
+                                                                <i class="material-icons">mode_edit</i>
+                                                            </a>
+                                                            <a href="{% url "course_delete" course.id %}"
+                                                               class="btn btn-danger btn-just-icon btn-fill btn-round btn-tooltip"
+                                                               data-toggle="tooltip"
+                                                               data-placement="top"
+                                                               title="Удалить курс"
+                                                               data-container="body">
+                                                                <i class="material-icons">delete</i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% empty %}
+
+                                    <h4>Вы еще не создали ни одного курса</h4>
+
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

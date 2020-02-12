@@ -1,7 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
 from django.contrib.auth.models import User
-
+from courses.models import Course
 from .models import Profile
 
 
@@ -37,3 +37,7 @@ class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['image', 'description']
+
+
+class CourseEnrollForm(forms.Form):
+    course = forms.ModelChoiceField(queryset=Course.objects.all(), widget=forms.HiddenInput)
