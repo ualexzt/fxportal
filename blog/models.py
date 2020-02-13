@@ -47,7 +47,7 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         if not self.id:
             self.slug = gen_slug(self.title)
-        super().save(*args, **kwargs)
+            super().save(*args, **kwargs)
         img = Image.open(self.image_post.path)
         output_size = (1300, 430)
         img.thumbnail(output_size)

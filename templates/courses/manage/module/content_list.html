@@ -19,73 +19,87 @@
                             <div class="card-body">
 
                                 <div class="col-md-4">
-                                    <ul class="nav nav-pills nav-pills-rose nav-stacked" id="modules">
-                                        {% for m in course.modules.all %}
-                                            <li data-id="{{ m.id }}" {% if m == module %}
-                                                class="selected"{% endif %}>
-                                                <a href="{% url "module_content_list" m.id %}">
+                                    <div class="card">
+                                        <ul class="nav nav-pills nav-pills-rose nav-stacked" id="modules">
+                                            {% for m in course.modules.all %}
+                                                <li data-id="{{ m.id }}" {% if m == module %}
+                                                    class="selected"{% endif %}>
+                                                    <a href="{% url "module_content_list" m.id %}">
                                                     <span>
                                                       Модуль <span class="order">{{ m.order|add:1 }}</span>
                                                     </span>
-                                                    <br>
-                                                    {{ m.title }}
-                                                </a>
-                                            </li>
-                                        {% empty %}
-                                            <li>No modules yet.</li>
-                                        {% endfor %}
-                                    </ul>
-                                    <p><a class="btn btn-info btn-xs" href="{% url "course_module_update" course.id %}">
-                                        Редактировать модуль</a></p>
+                                                        <br>
+                                                        {{ m.title }}
+                                                    </a>
+                                                </li>
+                                            {% empty %}
+                                                <li>No modules yet.</li>
+                                            {% endfor %}
+                                        </ul>
+                                        <div class="footer text-center"><a class="btn btn-warning btn-xs"
+                                                                           href="{% url "course_module_update" course.id %}">
+                                            Редактировать модуль</a></div>
+                                    </div>
                                 </div>
 
                                 <div class="col-md-8">
-                                    <div class="card">
-                                        <div class="card-content content-success">
-                                            <h5 class="category-social">
-                                                <i class="fa fa-newspaper-o"></i>
-                                                Модуль {{ module.order|add:1 }}: {{ module.title }}
-                                            </h5>
-                                            <h4 class="card-title">
-                                                "Материалы модуля:"
-                                            </h4>
+                                    <div class="card-content">
+                                        <h5 class="category-social">
+                                            <i class="fa fa-newspaper-o"></i>
+                                            Модуль {{ module.order|add:1 }}: {{ module.title }}
+                                        </h5>
+                                        <h4 class="card-title">
+                                            "Материалы модуля:"
+                                        </h4>
 
-                                            <div class="card-description" id="module-contents">
-                                                {% for content in module.contents.all %}
-                                                    <div data-id="{{ content.id }}">
-                                                        {% with item=content.item %}
-                                                            <p>{{ item }} ({{ item|model_name }})</p>
-                                                            <a href="{% url "module_content_update" module.id item|model_name item.id %}">Edit</a>
-                                                            <form action="{% url "module_content_delete" content.id %}"
-                                                                  method="post">
-                                                                <input type="submit" value="Delete">
-                                                                {% csrf_token %}
-                                                            </form>
-                                                        {% endwith %}
-                                                    </div>
-                                                {% empty %}
-                                                    <p>У этого модуля еще нет опубликованных материалов</p>
-                                                {% endfor %}
-                                            </div>
-                                            <small>Add new content:</small>
-                                            <div class="footer text-center">
+                                        <div class="card-description" id="module-contents">
 
-                                                <a class="btn btn-white btn-round"
-                                                   href="{% url "module_content_create" module.id "text" %}">
-                                                    Text</a>
-                                                <a class="btn btn-white btn-round"
-                                                   href="{% url "module_content_create" module.id "image" %}">
-                                                    Image</a>
-                                                <a class="btn btn-white btn-round"
-                                                   href="{% url "module_content_create" module.id "video" %}">
-                                                    Video</a>
-                                                <a class="btn btn-white btn-round"
-                                                   href="{% url "module_content_create" module.id "file" %}">
-                                                    File</a>
-                                            </div>
+                                            {% for content in module.contents.all %}
+
+                                                <div data-id="{{ content.id }}">
+                                                    {% with item=content.item %}
+                                                        <div class="card">
+                                                            <div class="card-content">
+                                                                <h4 class="card-title">
+                                                                    {{ item }} ({{ item|model_name }})
+                                                                </h4>
+                                                                <div class="footer">
+                                                                    <a class="btn btn-warning btn-xs btn-round"
+                                                                       href="{% url "module_content_update" module.id item|model_name item.id %}">Edit</a>
+                                                                    <form action="{% url "module_content_delete" content.id %}"
+                                                                          method="post">
+                                                                        <input class="btn btn-warning btn-xs btn-round"
+                                                                               type="submit"
+                                                                               value="Delete">
+                                                                        {% csrf_token %}
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    {% endwith %}
+                                                </div>
+                                            {% empty %}
+                                                <p>У этого модуля еще нет опубликованных материалов</p>
+                                            {% endfor %}
+
+
                                         </div>
+                                        <small>Добавить новые данные:</small>
+                                        <div class="footer text-center">
 
-
+                                            <a class="btn btn-info btn-round"
+                                               href="{% url "module_content_create" module.id "text" %}">
+                                                Text</a>
+                                            <a class="btn btn-info btn-round"
+                                               href="{% url "module_content_create" module.id "image" %}">
+                                                Image</a>
+                                            <a class="btn btn-info btn-round"
+                                               href="{% url "module_content_create" module.id "video" %}">
+                                                Video</a>
+                                            <a class="btn btn-info btn-round"
+                                               href="{% url "module_content_create" module.id "file" %}">
+                                                File</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

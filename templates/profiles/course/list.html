@@ -3,21 +3,47 @@
 {% block title %}My courses{% endblock %}
 
 {% block content %}
-    <h1>My courses</h1>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-icon" data-background-color="purple">
+                            <i class="material-icons">book</i>
+                        </div>
+                        <h5>Ваши курсы</h5>
+                        <div class="card-body">
 
-    <div class="module">
-        {% for course in object_list %}
-            <div class="course-info">
-                <h3>{{ course.title }}</h3>
-                <p><a href="{% url "student_course_detail" course.id %}">
-                Access contents</a></p>
+                            {% for course in object_list %}
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-content content-info">
+                                            <h5 class="card-title"><i class="fa fa-book"></i>
+                                                {{ course.title }}
+                                            </h5>
+                                            <p class="card-description">
+                                                {{ course.overview }}
+                                            </p>
+                                            <div class="footer text-center">
+                                                <a class="btn btn-white btn-round"
+                                                   href="{% url "student_course_detail" course.id %}">Приступить к
+                                                    изучению</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% empty %}
+                                <p>
+                                    Вы не подписаны ни на один из курсов
+                                    <a href="{% url "course_list" %}">Обзор курсов</a>
+                                    to enroll in a course.
+                                </p>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
             </div>
-        {% empty %}
-            <p>
-                You are not enrolled in any courses yet.
-                <a href="{% url "course_list" %}">Browse courses</a>
-                to enroll in a course.
-            </p>
-        {% endfor %}
+        </div>
     </div>
 {% endblock %}

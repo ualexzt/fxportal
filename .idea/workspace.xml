@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/blog/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/templatetags/blog_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog/last_post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diary/templatetags/diary.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/templatetags/diary_tags.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fxportal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fxportal/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/post_img/news3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/post_img/news3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/css/material-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/material-dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/courses/manage/module/content_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/courses/manage/module/content_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profiles/course/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profiles/course/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profiles/course/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profiles/course/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +248,8 @@
       <workItem from="1581452611111" duration="243000" />
       <workItem from="1581492508474" duration="5581000" />
       <workItem from="1581509672251" duration="6679000" />
-      <workItem from="1581524534623" duration="5576000" />
+      <workItem from="1581524534623" duration="5659000" />
+      <workItem from="1581579420037" duration="9121000" />
     </task>
     <task id="LOCAL-00001" summary="add blog app and create models, migrations">
       <created>1578146858594</created>
@@ -523,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581541583415</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="error correction">
+      <created>1581541821269</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1581541821269</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +582,6 @@
     <MESSAGE value="add Email and Password Reset" />
     <MESSAGE value="add Diary apps" />
     <MESSAGE value="add img file" />
-    <MESSAGE value="error correction" />
     <MESSAGE value="rename form" />
     <MESSAGE value="add note create, update, delete" />
     <MESSAGE value="update profile directory" />
@@ -569,7 +590,8 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="add app course" />
     <MESSAGE value="add app course full actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="add app course full actions" />
+    <MESSAGE value="error correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="error correction" />
   </component>
   <component name="WindowStateProjectService">
     <state x="283" y="49" key="#Inspections" timestamp="1578499462291">
@@ -598,10 +620,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="435" y="247" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1578590068309" />
-    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2" timestamp="1581541581908">
+    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2" timestamp="1581541820652">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1581541581908" />
+    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1581541820652" />
     <state x="294" y="23" key="CommitChangelistDialog2/0.23.1366.745@0.23.1366.745" timestamp="1579811020946" />
     <state x="100" y="100" width="1166" height="568" key="DiffContextDialog" timestamp="1581541164625">
       <screen x="0" y="0" width="1366" height="768" />
@@ -677,10 +699,10 @@
     <state x="232" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1581359753418" />
     <state x="192" y="23" key="SettingsEditor/0.23.1366.675@0.23.1366.675" timestamp="1578132822236" />
     <state x="232" y="45" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1579170020275" />
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1581541591907">
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1581541823650">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1581541591907" />
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1581541823650" />
     <state x="283" y="143" key="Vcs.Push.Dialog.v2/0.23.1366.745@0.23.1366.745" timestamp="1579811026598" />
     <state x="421" y="173" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1580461299698">
       <screen x="0" y="23" width="1366" height="677" />
