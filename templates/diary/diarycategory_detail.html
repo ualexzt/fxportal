@@ -1,65 +1,69 @@
 {% extends 'base_profile.html' %}
 {% load static %}
-{% load crispy_forms_tags %}
 {% block content %}
-    <div class="edit-table">
-        <div class="row">
-            <div class="col-lg-12 col-sm-12">
-                <div class="card m-b-30">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-8">
-                                <h5 class="header-title">Категории дневника - {{ object.name }}</h5>
-                            </div>
-                            <div class="col-4 text-right"><a
-                                    href="{% url 'diary_subcat_create' cat_pk=object.id %}"
-                                    type="button"
-                                    rel="tooltip" class="btn btn-default">
-                                <i class="mdi mdi-library-plus">Новый раздел</i>
-                            </a>
-                            </div>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-icon" data-background-color="orange">
+                            <a href="#"> <i class="material-icons">assignment</i> </a>
                         </div>
-                        <div class="">
-                            <table class="table" id="my-table">
-                                <thead>
-                                <tr>
-                                    <th>Раздел дневника</th>
-                                    <th>Дата обновления</th>
-                                    <th>Количество заметок</th>
-                                    <th></th>
-                                </tr>
-                                </thead>
-                                {% for subcategory in subcategories %}
-                                    <tbody>
-                                    <tr>
-                                        <td><a href="{{ subcategory.get_absolute_url }}">{{ subcategory.name }}</a></td>
-                                        <td>{{ subcategory.update_date|date:'b, d, Y' }}</td>
-                                        <td>{{ subcategory.diarynote_set.count }}</td>
-                                        <td style="white-space: nowrap; width: 15%;">
-                                            <div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
-                                                <div class="btn-group btn-group-sm" style="float: none;">
-                                                    <a href="{% url 'diary_subcat_update' cat_pk=subcategory.parent.id sub_pk=subcategory.id %}"
-                                                       type="button"
-                                                       class="tabledit-edit-button btn btn-sm btn-info"
-                                                       style="float: none; margin: 5px;"><span
-                                                            class="ti-pencil"></span></a>
-                                                    <a href="{% url 'diary_subcat_delete' cat_pk=subcategory.parent.id sub_pk=subcategory.id %}"
-                                                       type="button"
-                                                       class="tabledit-delete-button btn btn-sm btn-info"
-                                                       style="float: none; margin: 5px;"><span
-                                                            class="ti-trash"></span></a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                {% endfor %}
 
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                        <div class="card-content">
+                            <h4 class="card-title">Категории дневника - {{ object.name }}</h4>
+                          <a class="btn btn-warning btn-sm" href="{% url 'diary_subcat_create' cat_pk=object.id %}">Создать новую категорию</a>
+                            <div class="toolbar">
+                                <!--        Here you can write extra buttons/actions for the toolbar              -->
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Категория</th>
+                                        <th class="text-right">Дата обновления</th>
+                                        <th class="text-right">Количество заметок</th>
+                                        <th class="text-right">Действия</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for category in subcategories %}
+
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    {% if category.diarynote_set.first is None %}
+                                                        <a href="{% url 'diary_note_create' cat_pk=category.parent.id sub_pk=category.id %}"><i
+                                                                class="material-icons">
+                                                            library_books
+                                                        </i> {{ category.name }}</a>
+                                                    {% else %}
+                                                        <a href="{% url 'diary_note_update' cat_pk=category.parent.id sub_pk=category.id note_pk=category.diarynote_set.first.id %}"><i
+                                                                class="material-icons">
+                                                            library_books
+                                                        </i> {{ category.name }}</a>
+                                                    {% endif %}
+                                                </td>
+                                                <td class="text-right"> {{ category.update_date|date:'b, d, Y' }}</td>
+                                                <td class="text-right">{{ category.diarynote_set.count }}</td>
+                                                <td class="text-right">
+                                                    <a href="{% url 'diary_subcat_update'  cat_pk=category.parent.id sub_pk=category.id %}"
+                                                       class="btn btn-success btn-round btn-xs">
+                                                        <i class="material-icons">edit</i></a>
+                                                    <a href="{% url 'diary_subcat_delete' cat_pk=category.parent.id sub_pk=category.id %}"
+                                                       class="btn btn-danger btn-round btn-xs">
+                                                        <i class="material-icons">close</i></a>
+                                                </td>
+                                            </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div><!-- end content-->
+                    </div><!--  end card  -->
+                </div> <!-- end col-md-12 -->
             </div>
-        </div><!--end row-->
-    </div>
+            <!-- end row -->
+        </div>
 {% endblock %}

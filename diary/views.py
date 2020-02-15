@@ -138,7 +138,8 @@ class DiaryNoteCreateView(CreateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('diary_subcat_detail', kwargs={'cat_pk': self.kwargs['cat_pk'], 'sub_pk': self.kwargs['sub_pk']})
+        return reverse('diary_note_update', kwargs={'cat_pk': self.kwargs['cat_pk'], 'sub_pk': self.kwargs['sub_pk'],
+                                                    'note_pk': self.object.id})
 
 
 class DiaryNoteUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -146,12 +147,18 @@ class DiaryNoteUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     fields = ['title', 'content']
     pk_url_kwarg = 'note_pk'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['notes'] = DiaryNote.objects.filter(category=self.kwargs['sub_pk'])
+        return context
+
     def form_valid(self, form):
         form.instance.category = DiarySubCategory.objects.get(pk=self.kwargs['sub_pk'])
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('diary_subcat_detail', kwargs={'cat_pk': self.kwargs['cat_pk'], 'sub_pk': self.kwargs['sub_pk']})
+        return reverse('diary_note_update', kwargs={'cat_pk': self.kwargs['cat_pk'], 'sub_pk': self.kwargs['sub_pk'],
+                                                    'note_pk': self.object.id})
 
     def test_func(self):
         note = self.get_object()
@@ -165,7 +172,8 @@ class DiaryNoteDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     pk_url_kwarg = 'note_pk'
 
     def get_success_url(self):
-        return reverse('diary_subcat_detail', kwargs={'cat_pk': self.kwargs['cat_pk'], 'sub_pk': self.kwargs['sub_pk']})
+        return reverse('diary_note_update', kwargs={'cat_pk': self.kwargs['cat_pk'], 'sub_pk': self.kwargs['sub_pk'],
+                                                    'note_pk': self.object.id})
 
     def test_func(self):
         note = self.get_object()

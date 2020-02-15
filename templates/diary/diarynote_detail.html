@@ -1,39 +1,47 @@
 {% extends 'base_profile.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
+
     <div class="content">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header card-header-primary">
-                            <h4 class="card-title">Дневник трейдера</h4>
-                            <p class="card-category"> Добавьте свои мысли о торговле </p>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-3">
-                                    <h5> Заметки </h5>
-                                    <hr>
-                                    <ul>
-                                        {% for note in diarynote_list %}
-                                            <li><a href=""> {{ note.title }}</a></li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                                <div class="col-9">
-                                    <form method="post" enctype="multipart/form-data">
-                                        {% csrf_token %}
-                                        <div class="form-group label-floating">
-                                            {{ form.media }}
-                                            {{ form|crispy }}
-                                        </div>
-                                        <button type="submit" class="btn btn-success btn-sm pull-center">Запостить
-                                        </button>
-                                        <div class="clearfix"></div>
-                                    </form>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-icon" data-background-color="orange">
+                        <a href="#"> <i class="material-icons">assignment</i> </a>
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-title">Заметка - {{ object.title }} </h4>
 
-                                </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                {% for note in notes %}
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <h4 class="card-title">
+                                                <a href="{% url 'diary_note_update' cat_pk=note.category.parent.id sub_pk=note.category.id note_pk=note.id %}">{{ note.title }}</a>
+                                            </h4>
+                                        </div>
+                                    </div>
+
+                                {% endfor %}
+                            </div>
+                            <div class="col-md-9">
+                                <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <div class="form-group label-floating">
+                                        {{ form.media }}
+                                        {{ form|crispy }}
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-sm pull-center">Запостить
+                                    </button>
+                                    {% if object %}
+                                        <a href="{% url 'diary_note_delete' cat_pk=object.category.parent.id sub_pk=object.category.id note_pk=object.id %}"
+                                           type="button" class="btn btn-danger btn-sm">
+                                            Удалить
+                                        </a>
+                                    {% endif %}
+                                    <div class="clearfix"></div>
+                                </form>
                             </div>
                         </div>
                     </div>

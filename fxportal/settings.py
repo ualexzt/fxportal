@@ -127,7 +127,15 @@ CKEDITOR_CONFIGS = {
         'height': 900,
         'width': '100%',
         'toolbarCanCollapse': False,
-        'forcePasteAsPlainText': True
+        'forcePasteAsPlainText': True,
+        'extraPlugins': ','.join([
+            'easyimage',
+            'balloontoolbar',
+            'button',
+            'dialog',
+            'balloonpanel'
+
+        ]),
     }
 }
 
@@ -146,8 +154,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-#STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), ]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = MEDIA_DIR

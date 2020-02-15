@@ -86,29 +86,29 @@
                         <p> Dashboard </p>
                     </a>
                 </li>
-
                 <li>
-                    <a href="{% url 'post_create' %}">
+                    <a href="{% url 'user_all_post' %}">
                         <i class="material-icons">notes</i>
-                        <p> Добавить публикацию </p>
-                    </a>
-                </li>
-                {% if perms.Instructors %}
-                 <li>
-                    <a href="{% url 'manage_course_list' %}">
-                        <i class="material-icons">library_books</i>
-                        <p> Управление курсами</p>
-                    </a>
-                </li>
-                    {% else %}
-             <li>
-                    <a href="{% url 'student_course_list' %}">
-                        <i class="material-icons">library_books</i>
-                        <p> Учебные курсы</p>
+                        <p> Публикации </p>
                     </a>
                 </li>
 
-                {% endif %} 
+                {% if perms.Instructors %}
+                    <li>
+                        <a href="{% url 'manage_course_list' %}">
+                            <i class="material-icons">library_books</i>
+                            <p> Управление курсами</p>
+                        </a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{% url 'student_course_list' %}">
+                            <i class="material-icons">library_books</i>
+                            <p> Учебные курсы</p>
+                        </a>
+                    </li>
+
+                {% endif %}
 
                 {% get_categories as categories %}
                 {% if categories.count > 0 %}
@@ -168,7 +168,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> Profile </a>
+                    <a class="navbar-brand" href="#"> </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -301,10 +301,10 @@
         $('.nav li a[href="' + link + '"]').parent().addClass('active');
     });
 </script>
-  <script>
-    $(document).ready(function() {
-      {% block domready %}
-      {% endblock %}
+<script>
+    $(document).ready(function () {
+        {% block domready %}
+        {% endblock %}
     });
-  </script>
+</script>
 </html>

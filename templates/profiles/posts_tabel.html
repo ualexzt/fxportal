@@ -1,0 +1,60 @@
+{% extends 'base_profile.html' %}
+{% load static %}
+{% block content %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-icon" data-background-color="orange">
+                            <i class="material-icons">assignment</i>
+                        </div>
+
+                        <div class="card-content">
+                            <h4 class="card-title">Ваши публикации</h4>
+                            <a class="btn btn-warning btn-sm" href="{% url 'diary_cat_create' %}">Создать новую
+                                публикацию
+                            </a>
+                            <div class="toolbar">
+                                <!--        Here you can write extra buttons/actions for the toolbar              -->
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Заголовок</th>
+                                        <th class="text-right">Категория</th>
+                                        <th class="text-right">Дата публикации</th>
+                                        <th class="text-right">Действия</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for post in object_list %}
+                                        <tr>
+                                            <td></td>
+                                            <td><a href="{{ post.get_absolute_url }}"><i class="material-icons">
+                                                subject
+                                            </i> {{ post.title }}</a></td>
+                                            <td class="text-right">{{ post.category }} </td>
+                                            <td class="text-right">{{ post.pub_date|date:'b, d, Y' }}</td>
+                                            <td class="text-right">
+                                                <a href="{% url 'post_update' slug=post.slug %}"
+                                                   class="btn btn-success btn-round btn-xs">
+                                                    <i class="material-icons">edit</i></a>
+                                                <a href="{% url 'post_delete' slug=post.slug %}"
+                                                   class="btn btn-danger btn-round btn-xs">
+                                                    <i class="material-icons">close</i></a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div><!-- end content-->
+                    </div><!--  end card  -->
+                </div> <!-- end col-md-12 -->
+            </div>
+            <!-- end row -->
+        </div>
+{% endblock %}

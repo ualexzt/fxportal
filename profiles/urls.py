@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import profile_main, register, dashboard, subscription, StudentEnrollCourseView, StudentCourseListView, \
-    StudentCourseDetailView
+    StudentCourseDetailView, UserPostsTable
 from django.contrib.auth.views import LoginView, LogoutView, PasswordResetView, PasswordResetDoneView, \
     PasswordResetConfirmView, PasswordResetCompleteView
 
@@ -19,6 +19,7 @@ urlpatterns = [
          PasswordResetCompleteView.as_view(template_name='profiles/password_reset_complete.html'),
          name='password_reset_complete'),
     path('', profile_main, name='profile_main'),
+    path('allpost/', UserPostsTable.as_view(), name='user_all_post'),
     path('dashboard/', dashboard, name='dashboard'),
     path('subscription/', subscription, name='subscription'),
     path('enroll-course/', StudentEnrollCourseView.as_view(), name='student_enroll_course'),

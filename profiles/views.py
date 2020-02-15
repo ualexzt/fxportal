@@ -2,8 +2,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import FormView, DetailView, ListView
-
 from courses.models import Course
+from blog.models import Post
 from .forms import UserCreateForm, ProfileUpdateForm, UserUpdateForm, CourseEnrollForm
 from django.contrib.auth.decorators import login_required
 
@@ -43,6 +43,15 @@ def profile_main(request):
 @login_required
 def dashboard(request):
     return render(request, 'profiles/profile_dashboard.html')
+
+
+class UserPostsTable(LoginRequiredMixin, ListView):
+    model = Post
+    template_name = 'profiles/posts_tabel.html'
+
+    def get_queryset(self):
+        posts = super(UserPostsTable, self).get_queryset()
+        return posts.filter(author=self.request.user)
 
 
 @login_required

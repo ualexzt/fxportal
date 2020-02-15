@@ -6,28 +6,51 @@
         <div class="container-fluid">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header card-header-text" data-background-color="rose">
-                        <h4 class="card-title">Заметка - {{ object.title }} </h4>
+                    <div class="card-header card-header-icon" data-background-color="orange">
+                         <i class="material-icons">assignment</i>
                     </div>
                     <div class="card-content">
-                        <div class="row">
-                            <form method="post" enctype="multipart/form-data">
-                                {% csrf_token %}
-                                <div class="form-group label-floating">
-                                    {{ form.media }}
-                                    {{ form|crispy }}
-                                </div>
-                                <button type="submit" class="btn btn-success btn-sm pull-center">Запостить
-                                </button>
-                                {% if object %}
-                                    <a href="{% url 'diary_note_delete' cat_pk=object.category.parent.id sub_pk=object.category.id note_pk=object.id %}"
-                                       type="button" class="btn btn-danger btn-sm">
-                                        Удалить
+                        <h4 class="card-title">Заметка - {{ object.title }} </h4>
+                    {% if object %}
+                        <a href="{% url 'diary_note_create' cat_pk=object.category.parent.id sub_pk=object.category.id %}"
+                                       type="button"
+                                       rel="tooltip" class="btn btn-warning btn-sm">
+                                       Создать заметку
                                     </a>
-                                {% endif %}
-                                <div class="clearfix"></div>
-                            </form>
+                    {% else %}
 
+                    {% endif %}
+                        <div class="row">
+                            <div class="col-md-3">
+                                {% for note in notes %}
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <h4 class="card-title">
+                                                <a href="{% url 'diary_note_update' cat_pk=note.category.parent.id sub_pk=note.category.id note_pk=note.id %}">{{ note.title }}</a>
+                                            </h4>
+                                        </div>
+                                    </div>
+
+                                {% endfor %}
+                            </div>
+                            <div class="col-md-9">
+                                <form method="post" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <div class="form-group label-floating">
+                                        {{ form.media }}
+                                        {{ form|crispy }}
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-sm pull-center">Запостить
+                                    </button>
+                                    {% if object %}
+                                        <a href="{% url 'diary_note_delete' cat_pk=object.category.parent.id sub_pk=object.category.id note_pk=object.id %}"
+                                           type="button" class="btn btn-danger btn-sm">
+                                            Удалить
+                                        </a>
+                                    {% endif %}
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
