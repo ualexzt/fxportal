@@ -2,9 +2,97 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fbc0863-31ee-48bf-a28d-3ebf10eb8581" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profiles/posts_tabel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profiles/posts_tabel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courses/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/courses/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fxportal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fxportal/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/post_img/news3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/post_img/news3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/b_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/b_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/b_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/b_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/card-profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/card-profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/cards-test.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/cards-test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/content-test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/ex-about-us.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/ex-blog-post.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/ex-blog-posts.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/ex-contact.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/ex-landing.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/ex-login.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/ex-pricing.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/ex-product.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/ex-profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/ex-register.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/f_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/f_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/f_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/f_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/f_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/features-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/h_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/h_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/h_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/h_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/harvard.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/m_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/m_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/microsoft.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/modernizr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/p_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/p_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/p_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/p_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/p_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/pro_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/pro_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/pro_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/pro_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/stanford.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/t_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/t_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/t_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/team_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/team_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/team_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/team_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/team_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/test1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/test2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/test3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/vertical-nav.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/vertical-nav.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/assets-for-demo/vodafone.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/ckeditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/ckeditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/contents.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/contents.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/dialogs/easyimagealt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/icons/easyimagealigncenter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/icons/easyimagealignleft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/icons/easyimagealignright.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/icons/easyimagealt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/icons/easyimagefull.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/icons/easyimageside.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/icons/easyimageupload.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/icons/hidpi/easyimagealigncenter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/icons/hidpi/easyimagealignleft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/icons/hidpi/easyimagealignright.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/icons/hidpi/easyimagealt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/icons/hidpi/easyimagefull.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/icons/hidpi/easyimageside.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/icons/hidpi/easyimageupload.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/lang/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/samples/easyimage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/easyimage/styles/easyimage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/link/dialogs/link.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/link/dialogs/link.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/specialchar/dialogs/specialchar.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/specialchar/dialogs/specialchar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/tabletools/dialogs/tableCell.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/ckeditor/ckeditor/plugins/tabletools/dialogs/tableCell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/post_form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +327,15 @@
       <workItem from="1581608412216" duration="567000" />
       <workItem from="1581666178958" duration="6626000" />
       <workItem from="1581689698525" duration="5919000" />
-      <workItem from="1581763018011" duration="5249000" />
+      <workItem from="1581763018011" duration="6943000" />
+      <workItem from="1581782941395" duration="1920000" />
+      <workItem from="1581786388231" duration="15000" />
+      <workItem from="1581786960537" duration="662000" />
+      <workItem from="1581857966875" duration="1359000" />
+      <workItem from="1581941628645" duration="23000" />
+      <workItem from="1581941655280" duration="2556000" />
+      <workItem from="1581965931930" duration="188000" />
+      <workItem from="1582209295870" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="add blog app and create models, migrations">
       <created>1578146858594</created>
@@ -556,7 +652,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581769011831</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="&#10;error correction">
+      <created>1581769798396</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1581769798396</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,10 +734,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="435" y="247" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.768@0.0.1366.768" timestamp="1578590068309" />
-    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2" timestamp="1581769011393">
+    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2" timestamp="1581769797930">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1581769011393" />
+    <state x="294" y="23" width="778" height="677" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1581769797930" />
     <state x="294" y="23" key="CommitChangelistDialog2/0.23.1366.745@0.23.1366.745" timestamp="1579811020946" />
     <state x="100" y="100" width="1166" height="568" key="DiffContextDialog" timestamp="1581541164625">
       <screen x="0" y="0" width="1366" height="768" />
@@ -710,10 +813,10 @@
     <state x="232" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1581359753418" />
     <state x="192" y="23" key="SettingsEditor/0.23.1366.675@0.23.1366.675" timestamp="1578132822236" />
     <state x="232" y="45" key="SettingsEditor/0.23.1366.745@0.23.1366.745" timestamp="1579170020275" />
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1581769013526">
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2" timestamp="1581769800198">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1581769013526" />
+    <state x="283" y="124" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1581769800198" />
     <state x="283" y="143" key="Vcs.Push.Dialog.v2/0.23.1366.745@0.23.1366.745" timestamp="1579811026598" />
     <state x="421" y="173" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1580461299698">
       <screen x="0" y="23" width="1366" height="677" />

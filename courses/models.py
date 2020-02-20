@@ -58,11 +58,8 @@ class Module(models.Model):
 
 
 class Content(models.Model):
-    module = models.ForeignKey(Module,
-                               related_name='contents',
-                               on_delete=models.CASCADE)
-    content_type = models.ForeignKey(ContentType,
-                                     on_delete=models.CASCADE,
+    module = models.ForeignKey(Module, related_name='contents', on_delete=models.CASCADE)
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE,
                                      limit_choices_to={'model__in': (
                                          'text',
                                          'video',
@@ -77,9 +74,7 @@ class Content(models.Model):
 
 
 class ItemBase(models.Model):
-    owner = models.ForeignKey(User,
-                              related_name='%(class)s_related',
-                              on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, related_name='%(class)s_related', on_delete=models.CASCADE)
     title = models.CharField(max_length=250)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -99,11 +94,11 @@ class Text(ItemBase):
 
 
 class File(ItemBase):
-    file = models.FileField(upload_to='files')
+    file = models.FileField(upload_to='courses_files')
 
 
 class Image(ItemBase):
-    file = models.FileField(upload_to='images')
+    file = models.FileField(upload_to='courses_images')
 
 
 class Video(ItemBase):

@@ -124,18 +124,15 @@ CKEDITOR_CONFIGS = {
              '-', 'Blockquote'
              ]
         ],
-        'height': 900,
+        'height': '100%',
         'width': '100%',
         'toolbarCanCollapse': False,
         'forcePasteAsPlainText': True,
         'extraPlugins': ','.join([
-            'easyimage',
-            'balloontoolbar',
-            'button',
-            'dialog',
-            'balloonpanel'
-
+            'image2',
         ]),
+        'removePlugins': 'image',
+
     }
 }
 
@@ -165,10 +162,12 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
 CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_UPLOAD_SLUGIFY_FILENAME = False
+CKEDITOR_RESTRICT_BY_USER = True
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'ualexzt@gmail.com'
-EMAIL_HOST_PASSWORD = 'h33Bvz5577'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''

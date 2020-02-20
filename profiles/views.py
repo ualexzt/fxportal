@@ -48,6 +48,7 @@ def dashboard(request):
 class UserPostsTable(LoginRequiredMixin, ListView):
     model = Post
     template_name = 'profiles/posts_tabel.html'
+    ordering = ['-pub_date']
 
     def get_queryset(self):
         posts = super(UserPostsTable, self).get_queryset()

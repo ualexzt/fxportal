@@ -1,5 +1,6 @@
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.urls import reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from blog.models import Post, Category, Comment
 from .forms import CommentForm
@@ -36,6 +37,9 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('user_all_post')
 
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
